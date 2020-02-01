@@ -1,0 +1,15 @@
+.layout-first #og-logo-g1 {
+  fill: red;
+}
+
+.layout-first svg#og-logo:hover #og-logo-g3 {
+  fill: #f20;
+}
+
+.layout-first svg#og-logo:hover #og-logo-g1 {
+  fill: black;
+}
+
+.layout-first svg#og-logo:hover #og-logo-g2 {
+  fill: #502;
+}

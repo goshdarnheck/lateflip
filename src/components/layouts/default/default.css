@@ -1,0 +1,33 @@
+.layout-default {
+  line-height: 1.5;
+}
+
+@keyframes DefaultFade {
+  0% {
+    fill: #fff;
+  }
+
+  15% {
+    fill: #fff;
+  }
+
+  45% {
+    fill: #f0f;
+  }
+
+  55% {
+    fill: #f0f;
+  }
+
+  85% {
+    fill: #fff;
+  }
+
+  100% {
+    fill: #fff;
+  }
+}
+
+.layout-default #og-g3 {
+  animation: DefaultFade 10s linear 0s infinite;
+}
