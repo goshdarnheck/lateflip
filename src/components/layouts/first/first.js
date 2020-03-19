@@ -41,18 +41,7 @@ const First = ({ children, subheadline }) => (
           </div>
         )}
       </div>
-      <main
-        style={{
-          display: "grid",
-          gridGap: "2em",
-          gridTemplateColumns: "repeat(auto-fit, minmax(80px, 1fr))",
-          gridAutoRows: "80px",
-          gridAutoFlow: "dense",
-          padding: "2em",
-        }}
-      >
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
     <Footer />
   </div>
@@ -63,4 +52,6 @@ First.propTypes = {
   subheadline: PropTypes.string,
 }
 
-export default First
+export default First;
+
+export const fonts = ["Montserrat", "Bebas Neue"];

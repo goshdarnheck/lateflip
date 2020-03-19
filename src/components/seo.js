@@ -2,7 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ fonts, description, lang, meta, title }) {
+  const fontString = fonts ? fonts.join("|").replace(" ", "+") : null
+
   return (
     <Helmet
       htmlAttributes={{
@@ -44,7 +46,14 @@ function SEO({ description, lang, meta, title }) {
           content: description,
         },
       ].concat(meta)}
-    />
+    >
+      {fontString && (
+        <link
+          href={`https://fonts.googleapis.com/css?family=${fontString}&amp;display=swap`}
+          rel="stylesheet"
+        />
+      )}
+    </Helmet>
   )
 }
 

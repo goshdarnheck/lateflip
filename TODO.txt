@@ -1,0 +1,3 @@
+- add canonical URL to homepage that links to permanent URL
+- add CSS reset
+- clean up images/logo situation

@@ -1,0 +1,14 @@
+.layout-jazzy {
+  background-color: rebeccapurple;
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+
+.layout-jazzy main {
+  margin: 0 auto;
+  max-width: 60em;
+  padding: 0 2em;
+}
+
+.layout-jazzy .grid {
+}
