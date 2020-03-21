@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
-function SEO({ fonts, description, lang, meta, title }) {
+function SEO({ fonts, canonicalUrl, description, lang, meta, title }) {
   const fontString = fonts ? fonts.join("|").replace(" ", "+") : null
 
   return (
@@ -53,6 +53,7 @@ function SEO({ fonts, description, lang, meta, title }) {
           rel="stylesheet"
         />
       )}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl}></link>}
     </Helmet>
   )
 }

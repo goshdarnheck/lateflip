@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layouts/default/default"
+import Layout from "../layouts/default/default"
 import SEO from "../components/seo"
 
 const ArchivePage = () => (

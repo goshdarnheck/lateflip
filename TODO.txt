@@ -1,3 +1,11 @@
-- add canonical URL to homepage that links to permanent URL
-- add CSS reset
+- create icon logo for favicon etc.
 - clean up images/logo situation
+- create 404 page
+- style archives page
+- style about page
+- write content for about page
+- style footer
+
+# FUTURE
+
+- automate archives page content
