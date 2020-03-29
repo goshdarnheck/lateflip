@@ -1,5 +1,3 @@
-- create icon logo for favicon etc.
-- clean up images/logo situation
 - create 404 page
 - style archives page
 - style about page

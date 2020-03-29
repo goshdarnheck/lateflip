@@ -2,7 +2,19 @@
   font-family: Montserrat, sans-serif;
 }
 
-.layout-first main {
+.layout-first .lateflip-logo-top {
+  fill: #f20;
+}
+
+.layout-first .lateflip-logo-side {
+  fill: #502;
+}
+
+.layout-first .lateflip-logo-shadow {
+  fill: black;
+}
+
+.layout-first article {
   margin: 0 auto;
   width: 80%;
 }
@@ -160,20 +172,4 @@
 .layout-first .grid > li:nth-child(20) {
   background-color: indigo;
   grid-column: span 4;
-}
-
-.layout-first #og-logo-g1 {
-  fill: red;
-}
-
-.layout-first svg#og-logo:hover #og-logo-g3 {
-  fill: #f20;
-}
-
-.layout-first svg#og-logo:hover #og-logo-g1 {
-  fill: black;
-}
-
-.layout-first svg#og-logo:hover #og-logo-g2 {
-  fill: #502;
 }

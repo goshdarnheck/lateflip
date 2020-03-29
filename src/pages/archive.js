@@ -6,9 +6,9 @@ import SEO from "../components/seo"
 
 const ArchivePage = () => (
   <Layout archive={true}>
-    <SEO title="archives" />
-    <h1>Hi from the archives page</h1>
-    <p>Welcome to the archives</p>
+    <SEO title="Archive" />
+    <h1>Hi from the archive page</h1>
+    <p>Welcome to the archive</p>
     <ol>
       <li>
         2020

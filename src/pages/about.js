@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="about" />
+    <SEO title="About" />
     <h1>All About lateflip.com</h1>
     <p>
       Hey this is a website about skateboarding that someone made and they keep

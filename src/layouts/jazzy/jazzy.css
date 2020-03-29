@@ -4,11 +4,52 @@
   font-family: Montserrat, sans-serif;
 }
 
+.layout-jazzy .lateflip-logo-top {
+  fill: #fff;
+}
+
+.layout-jazzy .lateflip-logo-side {
+  fill: #000;
+}
+
+.layout-jazzy .lateflip-logo-shadow {
+  fill: transparent;
+}
+
 .layout-jazzy main {
+}
+
+.layout-jazzy header {
+  align-items: center;
+  display: flex;
+  height: 10em;
+}
+
+.layout-jazzy header > div {
+  height: 10em;
+  width: 7em;
+}
+
+.layout-jazzy header > h1 {
+  flex-grow: 1;
+  padding-left: 1em;
+}
+
+.layout-jazzy header svg {
+  transform: rotate(-90deg);
+  width: 10em;
+}
+
+.layout-jazzy article {
   margin: 0 auto;
   max-width: 60em;
   padding: 0 2em;
 }
 
 .layout-jazzy .grid {
+}
+
+.layout-jazzy h2 {
+  font-family: "Poiret One", cursive;
+  font-size: 10em;
 }

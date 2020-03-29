@@ -4,13 +4,15 @@ import { Link } from "gatsby"
 
 import Header from "../../components/header"
 import Footer from "../../components/footer"
-import Logo from "./logo"
+import Logo from "../../components/svg/lateflip-logo"
 
 import "./default.css"
 
+export const fonts = ["Montserrat"];
+
 const Default = ({ children }) => (
   <div className="layout layout-default">
-    <div>
+    <main>
       <Header />
       <div
         style={{
@@ -23,7 +25,7 @@ const Default = ({ children }) => (
           </Link>
         </h1>
       </div>
-      <main
+      <article
         style={{
           backgroundColor: "#007fff",
           color: "white",
@@ -33,15 +35,14 @@ const Default = ({ children }) => (
         }}
       >
         {children}
-      </main>
-    </div>
+      </article>
+    </main>
     <Footer />
   </div>
 )
 
 Default.propTypes = {
-  children: PropTypes.node.isRequired,
-  subheadline: PropTypes.string,
+  children: PropTypes.node.isRequired
 }
 
 export default Default

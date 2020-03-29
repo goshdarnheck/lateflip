@@ -1,4 +1,5 @@
 .layout-default {
+  font-family: Montserrat, sans-serif;
   line-height: 1.5;
 }
 
@@ -28,6 +29,6 @@
   }
 }
 
-.layout-default #og-g3 {
+.layout-default .lateflip-logo-top {
   animation: DefaultFade 10s linear 0s infinite;
 }

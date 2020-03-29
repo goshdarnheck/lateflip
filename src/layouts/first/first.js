@@ -4,15 +4,16 @@ import { Link } from "gatsby"
 
 import Header from "../../components/header"
 import Footer from "../../components/footer"
-import Logo from "./logo"
-
+import Logo from "../../components/svg/lateflip-logo"
 import "./first.css"
+
+export const fonts = ["Montserrat", "Bebas Neue"]
 
 const First = ({ children, subheadline }) => (
   <div className="layout layout-first">
+    <Header />
     <div>
-      <Header />
-      <div
+      <main
         style={{
           padding: `1em`,
           position: "relative",
@@ -28,7 +29,7 @@ const First = ({ children, subheadline }) => (
             style={{
               position: "absolute",
               boxShadow: "0.5em 0.5em #000",
-              bottom: "5%",
+              top: "5%",
               left: "5%",
               display: "inline-block",
               backgroundColor: "#fff",
@@ -40,8 +41,8 @@ const First = ({ children, subheadline }) => (
             {subheadline}
           </div>
         )}
-      </div>
-      <main>{children}</main>
+        <article>{children}</article>
+      </main>
     </div>
     <Footer />
   </div>
@@ -52,6 +53,4 @@ First.propTypes = {
   subheadline: PropTypes.string,
 }
 
-export default First;
-
-export const fonts = ["Montserrat", "Bebas Neue"];
+export default First

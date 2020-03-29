@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout, { fonts } from "../../../layouts/first/first"
 import SEO from "../../../components/seo"
