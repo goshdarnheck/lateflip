@@ -6,10 +6,10 @@ import SEO from "../components/seo"
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <h1>All About lateflip.com</h1>
+    <h1>All About Lateflip.com</h1>
     <p>
       Hey this is a website about skateboarding that someone made and they keep
-      updating it everyday.
+      updating it everyday. Questions? Comments? Hit me up on <a href="https://twitter.com/goshdarnheck">Twitter</a>.
     </p>
   </Layout>
 )

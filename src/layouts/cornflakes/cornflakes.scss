@@ -1,0 +1,96 @@
+.layout-cornflakes {
+  --background: #f1f1f1;
+  // --text: #fff;
+  // --primary: #fff;
+  // --secondary: rebeccapurple;
+
+  --red: #a42433; // red
+  --black: #101c28;
+  // color: #d6992e; // yorange
+  --green: #3d924f;
+
+  background-color: var(--background);
+  font-family: "Montserrat", sans-serif;
+
+  main {
+    background: url(./corny-o.svg) no-repeat top left;
+    background-position: 0 6em;
+  }
+
+  .brand {
+    font-family: "Mr Dafoe", cursive;
+    color: var(--red);
+    text-shadow: -3px 3px 0px rgba(255, 255, 255, 1),
+      -3px 3px 2px rgba(0, 0, 0, 0.5);
+    font-size: 5em;
+    margin: 0.2em 0 0 0.8em;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2em;
+    margin-bottom: 10em;
+
+    .home-link a {
+      display: inline-block;
+      color: var(--black);
+      font-family: "Biryani", sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+      transform: scaleY(1.2);
+      font-size: 6em;
+      line-height: 0.87;
+      margin-top: 1em;
+
+      span {
+        font-size: 1.21em;
+      }
+    }
+
+    h1 {
+      color: var(--green);
+      font-size: 0.8em;
+      margin-top: 0.4em;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      width: calc(100% - 0.8em);
+      margin-left: 0.8em;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        border-bottom: 1px solid var(--green);
+        width: 100%;
+      }
+
+      span {
+        background-color: var(--background);
+        padding: 0 0.8em;
+        position: relative;
+      }
+    }
+  }
+
+  article {
+    margin: 0 auto;
+    max-width: 80em;
+    padding: 2em 2em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > li {
+      img {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}

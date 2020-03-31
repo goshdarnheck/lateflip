@@ -1,17 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
+import { DateTime } from "luxon"
 
 function SEO({ fonts, canonicalUrl, description, lang, meta, title }) {
-  const fontString = fonts ? fonts.join("|").replace(" ", "+") : null
+  const fontString = fonts
+    ? fonts.reduce((acc, value) => {
+        const family = `family=${value.replace(" ", "+")}`
+        return acc === "" ? family : acc + `&${family}`
+      }, "")
+    : null
+
+  const finalTitle =
+    typeof title === "string" ? title : title.toLocaleString(DateTime.DATE_FULL)
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | lateflip`}
+      title={finalTitle}
+      titleTemplate={`%s | Lateflip`}
       meta={[
         {
           name: `description`,
@@ -19,7 +28,7 @@ function SEO({ fonts, canonicalUrl, description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: finalTitle,
         },
         {
           property: `og:description`,
@@ -39,7 +48,7 @@ function SEO({ fonts, canonicalUrl, description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: finalTitle,
         },
         {
           name: `twitter:description`,
@@ -49,11 +58,20 @@ function SEO({ fonts, canonicalUrl, description, lang, meta, title }) {
     >
       {fontString && (
         <link
-          href={`https://fonts.googleapis.com/css?family=${fontString}&amp;display=swap`}
+          href={`https://fonts.googleapis.com/css2?${fontString}&amp;display=swap`}
           rel="stylesheet"
         />
       )}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl}></link>}
+      {canonicalUrl && (
+        <link
+          rel="canonical"
+          href={
+            typeof canonicalUrl === "string"
+              ? canonicalUrl
+              : canonicalUrl.toFormat("/yyyy/LL/dd")
+          }
+        ></link>
+      )}
     </Helmet>
   )
 }
@@ -68,7 +86,7 @@ SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
 }
 
 export default SEO
