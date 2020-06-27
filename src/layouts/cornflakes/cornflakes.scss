@@ -1,29 +1,34 @@
 .layout-cornflakes {
-  --background: #f1f1f1;
-  // --text: #fff;
-  // --primary: #fff;
-  // --secondary: rebeccapurple;
+  --background: black;
+  --text: #3d924f;
+  --primary: #d6992e;
+  --secondary: #a42433;
 
-  --red: #a42433; // red
+  --box: #f1f1f1;
+  --red: #a42433;
   --black: #101c28;
-  // color: #d6992e; // yorange
+  --yorange: #d6992e;
   --green: #3d924f;
 
-  background-color: var(--background);
   font-family: "Montserrat", sans-serif;
+  background-color: black;
 
   main {
     background: url(./corny-o.svg) no-repeat top left;
-    background-position: 0 6em;
+    background-color: var(--box);
+    background-position: 0 8em;
+    background-size: 50%;
+    max-width: 70em;
+    padding: 1em 2em 2em;
   }
 
   .brand {
     font-family: "Mr Dafoe", cursive;
     color: var(--red);
-    text-shadow: -3px 3px 0px rgba(255, 255, 255, 1),
-      -3px 3px 2px rgba(0, 0, 0, 0.5);
-    font-size: 5em;
-    margin: 0.2em 0 0 0.8em;
+    text-shadow: -0.05em 0.05em 0 rgba(255, 255, 255, 1),
+      -0.05em 0.05em 0.03em rgba(0, 0, 0, 0.5);
+    font-size: 6em;
+    margin: 0 0 0 0.4em;
   }
 
   header {
@@ -69,17 +74,11 @@
       }
 
       span {
-        background-color: var(--background);
+        background-color: var(--box);
         padding: 0 0.8em;
         position: relative;
       }
     }
-  }
-
-  article {
-    margin: 0 auto;
-    max-width: 80em;
-    padding: 2em 2em;
   }
 
   .grid {
