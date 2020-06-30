@@ -1,8 +1,7 @@
 import React from "react"
 import { DateTime } from "luxon"
-// import { Link } from "gatsby"
 
-import Layout, { fonts } from "../../../layouts/first"
+import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 
 const date = DateTime.fromISO("2020-01-30")

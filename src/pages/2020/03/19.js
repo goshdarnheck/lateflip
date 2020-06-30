@@ -2,9 +2,10 @@ import React from "react"
 // import { Link } from "gatsby"
 import { DateTime } from "luxon"
 
-import Layout, { fonts } from "../../../layouts/jazzy/jazzy"
+import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 import Logo from "../../../components/svg/lateflip-logo"
+import "./cube.scss"
 
 const date = DateTime.fromISO("2020-03-19")
 

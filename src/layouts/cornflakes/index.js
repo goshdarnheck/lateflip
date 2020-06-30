@@ -23,6 +23,7 @@ const Cornflakes = ({ children, subheadline, date }) => (
           </Link>
           <div>
             <h1><span>{subheadline}</span></h1>
+            <h2>{date.toLocaleString(DateTime.DATE_FULL)}</h2>
           </div>
         </div>
       </header>
