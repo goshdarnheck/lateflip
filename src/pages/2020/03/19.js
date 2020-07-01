@@ -7,10 +7,16 @@ import SEO from "../../../components/seo"
 import Logo from "../../../components/svg/lateflip-logo"
 import "./cube.scss"
 
-const date = DateTime.fromISO("2020-03-19")
+export const frontmatter = {
+  url: "/2020/03/19",
+  day: "2020-03-19",
+  subheadline: "love being inside and online",
+}
+
+const date = DateTime.fromISO(frontmatter.day)
 
 const Page = () => (
-  <Layout subheadline="love being inside and online" date={date}>
+  <Layout subheadline={frontmatter.subheadline} date={date}>
     <SEO fonts={fonts} title={date} canonicalUrl={date} />
     <ul className="grid">
       <li>

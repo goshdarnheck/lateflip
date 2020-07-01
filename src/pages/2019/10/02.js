@@ -4,14 +4,24 @@ import { DateTime } from "luxon"
 import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 
-const date = DateTime.fromISO("2020-01-30")
+export const frontmatter = {
+  url: "/2019/10/02",
+  day: "2019-10-02",
+  subheadline: "this is a new old test"
+}
+
+const date = DateTime.fromISO(frontmatter.day)
 
 const Page = () => (
-  <Layout subheadline="my passion is graphic design" date={date}>
+  <Layout subheadline={frontmatter.subheadline}  date={date}>
     <SEO fonts={fonts} title={date} canonicalUrl={date} />
     <ul className="grid">
-      <li><h2>TEST</h2></li>
-      <li><h3>testing</h3></li>
+      <li>
+        <h2>TEST</h2>
+      </li>
+      <li>
+        <h3>testing</h3>
+      </li>
       <li></li>
       <li></li>
       <li></li>

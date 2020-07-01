@@ -7,17 +7,10 @@ import SEO from "../components/seo"
 
 const ArchivePage = ({ data }) => {
   let pageTree = {}
-  data.allSitePage.edges
-    .reduce((filtered, edge) => {
-      if (/\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\//.exec(edge.node.path)) {
-        const iso8601 = edge.node.path.slice(1, -1).replace(/\//g, "-")
-        filtered.push({
-          url: edge.node.path,
-          luxonDate: DateTime.fromISO(iso8601),
-        })
-      }
-      return filtered
-    }, [])
+  data.allJavascriptFrontmatter.edges
+    .map(edge => {
+      return { ...edge.node.frontmatter, luxonDate: DateTime.fromISO(edge.node.frontmatter.day) }
+    })
     .sort((a, b) => {
       return a.luxonDate > b.luxonDate
     })
@@ -38,7 +31,6 @@ const ArchivePage = ({ data }) => {
       <SEO title="Archive" />
       <h1>Archive</h1>
       <p>Welcome to the archive</p>
-
       <ol style={{ listStyle: "none" }}>
         {Object.keys(pageTree).map(year => {
           return (
@@ -70,17 +62,21 @@ const ArchivePage = ({ data }) => {
           )
         })}
       </ol>
-      <Link to="/">Go back to the homepage</Link>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query HomePageQuery {
-    allSitePage {
+  query PagesFrontmatterQuery {
+    allJavascriptFrontmatter {
       edges {
         node {
-          path
+          frontmatter {
+            error
+            day
+            subheadline
+            url
+          }
         }
       }
     }
