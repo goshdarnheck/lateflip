@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 import { Link } from "gatsby"
 
-import Header from "../../components/header"
+import Top from "../../components/top"
 import Footer from "../../components/footer"
 import Logo from "../../components/svg/lateflip-logo"
 import "./cube.scss"
@@ -27,7 +27,7 @@ const TheCube = () => {
 
 const Cube = ({ children, subheadline, date }) => (
   <div className="layout layout-cubes">
-    <Header />
+    <Top />
     <main>
       <header>
         <div>

@@ -1,7 +1,2 @@
 - style unique 404 page
-- style archives page
 - style about page
-
-# FUTURE
-
-- automate archives page content - https://www.gatsbyjs.org/packages/gatsby-transformer-javascript-frontmatter/?=transformer%20js

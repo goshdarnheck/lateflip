@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import Header from "../../components/header"
+import Top from "../../components/top"
 import Footer from "../../components/footer"
 import Logo from "../../components/svg/lateflip-logo"
 import "./first.css"
@@ -11,7 +11,7 @@ export const fonts = ["Montserrat", "Bebas Neue"]
 
 const First = ({ children, subheadline }) => (
   <div className="layout layout-first">
-    <Header />
+    <Top />
     <div>
       <main
         style={{

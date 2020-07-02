@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 import { Link } from "gatsby"
 
-import Header from "../../components/header"
+import Top from "../../components/top"
 import Footer from "../../components/footer"
 import Logo from "../../components/svg/lateflip-logo"
 import "./jazzy.scss"
@@ -12,7 +12,7 @@ export const fonts = ["Montserrat", "Poiret One"]
 
 const Jazzy = ({ children, subheadline, date }) => (
   <div className="layout layout-jazzy">
-    <Header />
+    <Top />
     <main>
       <header>
         <div>

@@ -1,6 +1,21 @@
 .layout-default {
   font-family: Montserrat, sans-serif;
   line-height: 1.5;
+
+  header {
+    padding: 1em;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  article {
+    background-color: #007fff;
+    color: white;
+    margin: 5em 0 10em;
+    padding: 5em 10% 6.5em 3em;
+  }
 }
 
 @keyframes DefaultFade {

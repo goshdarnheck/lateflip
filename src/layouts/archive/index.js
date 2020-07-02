@@ -6,20 +6,18 @@ import Top from "../../components/top"
 import Footer from "../../components/footer"
 import Logo from "../../components/svg/lateflip-logo"
 
-import "./default.scss"
+import "./archive.scss"
 
-export const fonts = ["Montserrat"]
+export const fonts = ["Montserrat", "Source+Code+Pro:wght@900"]
 
-const Default = ({ children }) => (
-  <div className="layout layout-default">
+const Archive = ({ children }) => (
+  <div className="layout layout-archive">
     <main>
       <Top />
       <header>
-        <h1>
-          <Link to="/">
-            <Logo />
-          </Link>
-        </h1>
+        <Link to="/" title="">
+          <Logo />
+        </Link>
       </header>
       <article>{children}</article>
     </main>
@@ -27,8 +25,8 @@ const Default = ({ children }) => (
   </div>
 )
 
-Default.propTypes = {
+Archive.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Default
+export default Archive

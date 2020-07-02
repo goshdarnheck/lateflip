@@ -2,14 +2,55 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { DateTime } from "luxon"
 
-import Layout from "../layouts/default"
+import Layout, { fonts }  from "../layouts/archive"
 import SEO from "../components/seo"
+
+const ArchiveMonth = ({ month, year, pages }) => {
+  const endDate = DateTime.fromObject({ month, year }).endOf("month")
+  let date = DateTime.fromObject({ month, year, day: 1 }).startOf("week")
+  let days = []
+
+  while (!date.hasSame(endDate.plus({ days: 1 }), "day")) {
+    const key = date.toFormat("dm");
+
+    if (date.month !== endDate.month) {
+      days.push(<span key={key}></span>)
+    } else if (pages[date.day]) {
+      days.push(
+        <span key={key}>
+          <Link to={pages[date.day].url} title={`${pages[date.day].subheadline} - ${date.toLocaleString(DateTime.DATE_HUGE)}`}>{date.toFormat("d")}</Link>
+        </span>
+      )
+    } else {
+      days.push(<span key={key}>{date.toFormat("d")}</span>)
+    }
+
+    date = date.plus({ days: 1 })
+  }
+
+  return (
+    <div>
+      <h3>
+        {DateTime.fromObject({
+          month: month,
+          year: year,
+          day: 1,
+        }).toFormat("LLLL")}
+      </h3>
+      <div className="calendar">{days}</div>
+    </div>
+  )
+}
 
 const ArchivePage = ({ data }) => {
   let pageTree = {}
+
   data.allJavascriptFrontmatter.edges
     .map(edge => {
-      return { ...edge.node.frontmatter, luxonDate: DateTime.fromISO(edge.node.frontmatter.day) }
+      return {
+        ...edge.node.frontmatter,
+        luxonDate: DateTime.fromISO(edge.node.frontmatter.day),
+      }
     })
     .sort((a, b) => {
       return a.luxonDate > b.luxonDate
@@ -17,51 +58,45 @@ const ArchivePage = ({ data }) => {
     .forEach(page => {
       if (!pageTree[page.luxonDate.year]) {
         pageTree[page.luxonDate.year] = {
-          [page.luxonDate.month]: [page],
+          [page.luxonDate.month]: {
+            [page.luxonDate.day]: page,
+          },
         }
       } else if (!pageTree[page.luxonDate.year][page.luxonDate.month]) {
-        pageTree[page.luxonDate.year][page.luxonDate.month] = [page]
+        pageTree[page.luxonDate.year][page.luxonDate.month] = {
+          [page.luxonDate.day]: page,
+        }
       } else {
-        pageTree[page.luxonDate.year][page.luxonDate.month].push(page)
+        pageTree[page.luxonDate.year][page.luxonDate.month][
+          page.luxonDate.day
+        ] = page
       }
     })
 
   return (
-    <Layout archive={true}>
-      <SEO title="Archive" />
+    <Layout>
+      <SEO fonts={fonts} title="Archive" />
       <h1>Archive</h1>
-      <p>Welcome to the archive</p>
-      <ol style={{ listStyle: "none" }}>
-        {Object.keys(pageTree).map(year => {
-          return (
+      <div className="archive">
+        <ul className="archive__years">
+          {Object.keys(pageTree).map(year => (
             <li key={year}>
-              {year}
-              <ol style={{ listStyle: "none" }}>
-                {Object.keys(pageTree[year]).map(month => {
-                  return (
-                    <li key={month}>
-                      {month}
-                      <ol style={{ listStyle: "none" }}>
-                        {pageTree[year][month].map(page => {
-                          return (
-                            <li key={page.luxonDate.day}>
-                              <Link to={page.url}>
-                                {page.luxonDate.toLocaleString(
-                                  DateTime.DATE_HUGE
-                                )}
-                              </Link>
-                            </li>
-                          )
-                        })}
-                      </ol>
-                    </li>
-                  )
-                })}
-              </ol>
+              <h2>{year}</h2>
+              <ul className="archive__months">
+                {Object.keys(pageTree[year]).map(month => (
+                  <li key={month}>
+                    <ArchiveMonth
+                      month={month}
+                      year={year}
+                      pages={pageTree[year][month]}
+                    />
+                  </li>
+                ))}
+              </ul>
             </li>
-          )
-        })}
-      </ol>
+          ))}
+        </ul>
+      </div>
     </Layout>
   )
 }

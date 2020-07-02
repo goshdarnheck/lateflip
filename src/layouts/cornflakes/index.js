@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 import { Link } from "gatsby"
 
-import Header from "../../components/header"
+import Top from "../../components/top"
 import Footer from "../../components/footer"
 import "./cornflakes.scss"
 
@@ -11,7 +11,7 @@ export const fonts = ["Montserrat", "Mr Dafoe", "Biryani:wght@800"]
 
 const Cornflakes = ({ children, subheadline, date }) => (
   <div className="layout layout-cornflakes">
-    <Header />
+    <Top />
     <main>
       <div className="brand">Nobody's</div>
       <header>
