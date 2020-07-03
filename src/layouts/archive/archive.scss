@@ -1,13 +1,17 @@
 .layout-archive {
+  --background: #fff;
+  --text: #007fff;
+  --primary: #007fff;
+  --secondary: #473d2f;
   font-family: Montserrat, sans-serif;
   line-height: 1.5;
 
   .lateflip-logo-top {
-    fill: #007fff;
+    fill: var(--text);
   }
 
   .lateflip-logo-side {
-    fill: #fff;
+    fill: var(--background);
   }
 
   .lateflip-logo-shadow {
@@ -40,11 +44,12 @@
   }
 
   article {
-    background-color: #007fff;
+    background-color: var(--text);
     clip-path: polygon(100% 10vw, 100% 100%, 0 100%, 0 0);
-    color: white;
+    color: var(--background);
     margin: 0 0 0 0;
-    padding: 20vw 0 6.5em 0;
+    overflow-x: hidden;
+    padding: calc(20vw + 3em) 0 6.5em 0;
     position: relative;
 
     h1 {
@@ -74,9 +79,14 @@
   }
 
   & &__years {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h2 {
+      font-family: "Source Code Pro", monospace;
       font-size: 5em;
-      margin: 0 0 0.14em 0;
+      margin: 0 0 0.14em -0.11em;
       transform: rotate(-7deg);
       width: 18rem;
     }
@@ -94,14 +104,14 @@
     }
 
     > li {
-      background-color: #fff;
-      clip-path: polygon(100% 10%, 100% 90%, 0 100%, 0 0);
-      color: #007fff;
+      background-color: var(--background);
+      clip-path: polygon(100% 10%, 100% 90%, 0 100%, 10% 0);
+      color: var(--text);
       padding: 4em 2em;
     }
 
     > li:nth-child(odd) {
-      clip-path: polygon(100% 0, 100% 100%, 0 90%, 0 10%);
+      clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
     }
   }
 
@@ -119,8 +129,8 @@
     }
 
     a {
-      background-color: #007fff;
-      color: white;
+      background-color: var(--text);
+      color: var(--background);
       text-decoration: none;
       display: inline-block;
       width: 100%;
@@ -129,12 +139,12 @@
 
       &:focus {
         outline: none;
-        background-color: green;
+        background-color: var(--secondary);
       }
 
       &:active,
       &:hover {
-        background-color: orange;
+        background-color: var(--secondary);
       }
     }
   }
@@ -148,8 +158,14 @@
     }
 
     article {
-      margin: 2em 5em 0 0;
-      padding: 20vw 3em 6.5em 0;
+      margin: 0 5em 0 0;
+      padding: calc(20vw + 3em) 3em 6.5em 5em;
+    }
+  }
+
+  .archive {
+    & &__years {
+      display: block;
     }
   }
 }

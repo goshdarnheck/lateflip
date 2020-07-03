@@ -15,7 +15,7 @@ const Archive = ({ children }) => (
     <main>
       <Top />
       <header>
-        <Link to="/" title="">
+        <Link to="/" title="Home">
           <Logo />
         </Link>
       </header>
