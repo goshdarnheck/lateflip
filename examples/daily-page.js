@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { dateFromUrl } from "../../../lib/utils"
 
 // The SEO component wraps react-helmet
@@ -14,7 +15,6 @@ import SEO from "../../../components/seo"
 // Import a layout component and it's font list
 import Layout, { fonts } from "../../../layouts/jazzy"
 
-
 // Including these fields will add the "daily page" to the archive
 export const frontmatter = {
   url: "/2019/01/02",
@@ -23,22 +23,35 @@ export const frontmatter = {
 
 const date = dateFromUrl(frontmatter.url)
 
+const CustomPage = styled.div`
+  .layout-jazzy {
+    --background: purple;
+  }
+`
+
 const Page = () => (
-  <Layout subheadline={frontmatter.subheadline} date={date}>
-    <SEO fonts={fonts} title={date} canonicalUrl={date} />
+  <CustomPage>
     {/*
+    For custom CSS for a "daily page" The convention is to
+    create a styled wrapper using styled-components
+    */}
+    <Layout subheadline={frontmatter.subheadline} date={date}>
+      <SEO fonts={fonts} title={date} canonicalUrl={date} />
+      {/*
       Layouts follow a convention of styling a `.grid` element,
       although a page does not have to implement one
       */}
-    <ul className="grid">
-      <li>
-        <h2>TEST</h2>
-      </li>
-      <li>
-        <h3>testing</h3>
-      </li>
-    </ul>
-  </Layout>
+      <ul className="grid">
+        <li>
+          <h2>Some Content</h2>
+          <p>You can put whatever you want here!</p>
+        </li>
+        <li>
+          <p>Something else!</p>
+        </li>
+      </ul>
+    </Layout>
+  </CustomPage>
 )
 
 export default Page

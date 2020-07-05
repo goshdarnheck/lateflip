@@ -9,23 +9,8 @@ import "./cube.scss"
 
 export const fonts = ["Montserrat", "Poiret One"]
 
-const TheCube = () => {
-  return (
-    <div class="scene">
-      <div class="cube">
-        <div class="cube__face cube__face--front">front</div>
-        <div class="cube__face cube__face--back">back</div>
-        <div class="cube__face cube__face--right">right</div>
-        <div class="cube__face cube__face--left">left</div>
-        <div class="cube__face cube__face--top">top</div>
-        <div class="cube__face cube__face--bottom">bottom</div>
-      </div>
-    </div>
-  )
-}
-
 const Cube = ({ children, subheadline, date }) => (
-  <div className="layout layout-cubes">
+  <div className="layout layout-cube">
     <Top />
     <main>
       <header>
@@ -39,8 +24,9 @@ const Cube = ({ children, subheadline, date }) => (
           <h2>{date.toLocaleString(DateTime.DATE_FULL)}</h2>
         </div>
       </header>
-      <TheCube />
-      <article>{children}</article>
+      <article>
+        <div class="scene">{children}</div>
+      </article>
     </main>
     <Footer />
   </div>
