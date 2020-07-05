@@ -20,7 +20,7 @@
     }
 
     &-shadow {
-      fill: var(--text);
+      fill: var(--background);
     }
 
     &:hover {
@@ -53,7 +53,7 @@
     h1 {
       font-size: 22.8vw;
       font-family: var(--heading-font);
-      left: -0.1em;
+      left: -0.09em;
       letter-spacing: 0.08em;
       margin: 0;
       position: absolute;

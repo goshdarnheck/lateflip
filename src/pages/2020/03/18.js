@@ -5,8 +5,8 @@ import Layout, { fonts } from "../../../layouts/jazzy"
 import Logo from "../../../components/svg/lateflip-logo"
 
 export const frontmatter = {
-  url: "/2020/03/19",
-  subheadline: "love being inside and online",
+  url: "/2020/03/18",
+  subheadline: "testing computer software",
 }
 
 const date = dateFromUrl(frontmatter.url)
@@ -14,7 +14,7 @@ const date = dateFromUrl(frontmatter.url)
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline} date={date}>
     <SEO fonts={fonts} title={date} canonicalUrl={date} />
-    <ul className="grid">
+    <ul className="">
       <li>
         <h2>
           <a href="https://www.youtube.com/watch?v=mIkWPoeHlvM">

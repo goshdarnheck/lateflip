@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 
 import Top from "../../components/top"
 import Footer from "../../components/footer"
-import Logo from "../../components/svg/lateflip-logo"
 import "./cube.scss"
 
 export const fonts = ["Montserrat", "Poiret One"]
@@ -32,7 +31,7 @@ const Cube = ({ children, subheadline, date }) => (
       <header>
         <div>
           <Link to="/" title="Take me home">
-            <Logo />
+            The Lateflip Cube
           </Link>
         </div>
         <div>
@@ -40,6 +39,7 @@ const Cube = ({ children, subheadline, date }) => (
           <h2>{date.toLocaleString(DateTime.DATE_FULL)}</h2>
         </div>
       </header>
+      <TheCube />
       <article>{children}</article>
     </main>
     <Footer />
@@ -51,4 +51,4 @@ Cube.propTypes = {
   subheadline: PropTypes.string,
 }
 
-export default Cubes
+export default Cube

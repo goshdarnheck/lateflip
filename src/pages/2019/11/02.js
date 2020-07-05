@@ -1,7 +1,7 @@
 import React from "react"
 import { dateFromUrl } from "../../../lib/utils"
 import SEO from "../../../components/seo"
-import Layout, { fonts } from "../../../layouts/jazzy"
+import Layout, { fonts } from "../../../layouts/cube"
 
 export const frontmatter = {
   url: "/2019/11/02",
@@ -20,24 +20,6 @@ const Page = () => (
       <li>
         <h3>testing</h3>
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
     </ul>
   </Layout>
 )
