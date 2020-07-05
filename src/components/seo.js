@@ -3,13 +3,12 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { DateTime } from "luxon"
 
-function SEO({ fonts, canonicalUrl, description, lang, meta, title }) {
-  const fontString = fonts
-    ? fonts.reduce((acc, value) => {
-        const family = `family=${value.replace(" ", "+")}`
-        return acc === "" ? family : acc + `&${family}`
-      }, "")
-    : null
+function SEO({ fonts, canonicalUrl, description, lang = "en", meta, title }) {
+  const allFonts = ["Montserrat", "Railway", ...fonts]
+  const fontString = allFonts.reduce((acc, value) => {
+    const family = `family=${value.replace(" ", "+")}`
+    return acc === "" ? family : acc + `&${family}`
+  })
 
   const finalTitle =
     typeof title === "string" ? title : title.toLocaleString(DateTime.DATE_FULL)

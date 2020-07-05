@@ -1,16 +1,14 @@
 import React from "react"
-import { DateTime } from "luxon"
-
+import { dateFromUrl } from "../../../lib/utils"
 import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 
 export const frontmatter = {
   url: "/2019/10/02",
-  day: "2019-10-02",
   subheadline: "this is a new old test"
 }
 
-const date = DateTime.fromISO(frontmatter.day)
+const date = dateFromUrl(frontmatter.url)
 
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline}  date={date}>

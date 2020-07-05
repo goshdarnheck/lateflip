@@ -1,19 +1,15 @@
 import React from "react"
-// import { Link } from "gatsby"
-import { DateTime } from "luxon"
-
-import Layout, { fonts } from "../../../layouts/jazzy"
+import { dateFromUrl } from "../../../lib/utils"import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 import Logo from "../../../components/svg/lateflip-logo"
 import "./cube.scss"
 
 export const frontmatter = {
   url: "/2020/03/19",
-  day: "2020-03-19",
   subheadline: "love being inside and online",
 }
 
-const date = DateTime.fromISO(frontmatter.day)
+const date = dateFromUrl(frontmatter.url)
 
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline} date={date}>

@@ -1,73 +1,75 @@
 .layout-archive {
   --background: #fff;
-  --text: #007fff;
+  --text: #473d2f;
   --primary: #007fff;
-  --secondary: #473d2f;
-  font-family: Montserrat, sans-serif;
-  line-height: 1.5;
+  --secondary: #f0c808;
+  --body-font: "Roboto";
+  --heading-font: "Source Code Pro", monospace;
 
-  .lateflip-logo-top {
-    fill: var(--text);
+  ::selection {
+    background: var(--secondary);
   }
 
-  .lateflip-logo-side {
-    fill: var(--background);
-  }
-
-  .lateflip-logo-shadow {
-    fill: rgb(71, 61, 47);
-  }
-
-  .lateflip-logo:hover {
-    .lateflip-logo-top {
-      fill: magenta;
+  .lateflip-logo {
+    &-top {
+      fill: var(--secondary);
     }
 
-    .lateflip-logo-side {
-      fill: darkmagenta;
+    &-side {
+      fill: var(--background);
     }
 
-    .lateflip-logo-shadow {
-      fill: #000;
+    &-shadow {
+      fill: var(--text);
+    }
+
+    &:hover {
+      .lateflip-logo-top {
+        fill: var(--primary);
+      }
     }
   }
 
   header {
     display: flex;
     padding: 1em;
-    justify-content: center;
+    justify-content: flex-end;
 
     a {
-      max-width: 14em;
+      max-width: 40vw;
       width: 100%;
     }
   }
 
   article {
-    background-color: var(--text);
+    background-color: var(--primary);
     clip-path: polygon(100% 10vw, 100% 100%, 0 100%, 0 0);
     color: var(--background);
-    margin: 0 0 0 0;
+    margin: 0;
     overflow-x: hidden;
-    padding: calc(20vw + 3em) 0 6.5em 0;
+    padding: calc(20vw + 1em) 0 4em 0;
     position: relative;
 
     h1 {
-      margin: 0 0 0 0;
-      font-size: 20vw;
-      font-family: "Source Code Pro", monospace;
-      text-transform: uppercase;
-      transform: rotate(6.5deg);
-      position: absolute;
-      top: -0.22em;
-      right: -0.3em;
+      font-size: 22.8vw;
+      font-family: var(--heading-font);
+      left: -0.1em;
       letter-spacing: 0.08em;
+      margin: 0;
+      position: absolute;
       text-shadow: -4vw 4vw 0 rgb(71, 61, 47);
+      text-align: center;
+      text-transform: uppercase;
+      top: -0.3em;
+      transform: rotate(5.8deg);
+      width: 100%;
     }
   }
 }
 
 .archive {
+  padding: 0 1.6em;
+
   ul {
     list-style: none;
     margin: 0;
@@ -79,93 +81,82 @@
   }
 
   & &__years {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    margin: 0 auto;
+    max-width: 82em;
 
     h2 {
-      font-family: "Source Code Pro", monospace;
+      font-family: var(--heading-font);
       font-size: 5em;
-      margin: 0 0 0.14em -0.11em;
-      transform: rotate(-7deg);
+      margin: 0 0 0.14em -0.052em;
+      text-shadow: -0.195em 0.195em 0 rgb(71, 61, 47);
       width: 18rem;
     }
   }
 
   & &__months {
-    margin-top: -4.1em;
+    color: var(--text);
     display: grid;
+    filter: drop-shadow(-1em 1em 0 rgb(71, 61, 47));
     grid-gap: 2em;
-    grid-template-columns: repeat(auto-fill, 18em);
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    margin-top: -2.8em;
 
     h3 {
       font-size: 2em;
+      font-family: var(--heading-font);
+      font-variant: small-caps;
       margin: 0;
+      letter-spacing: 0.08em;
+      text-align: center;
     }
 
     > li {
       background-color: var(--background);
-      clip-path: polygon(100% 10%, 100% 90%, 0 100%, 10% 0);
-      color: var(--text);
-      padding: 4em 2em;
-    }
-
-    > li:nth-child(odd) {
-      clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
+      padding: 1.2em;
+      clip-path: polygon(93% 0, 100% 100%, 7% 100%, 0 0);
     }
   }
 
   .calendar {
     display: grid;
-    grid-template-columns: repeat(7, 2em);
+    grid-gap: 0.2em;
+    grid-template-columns: repeat(7, 1.6em);
+    margin: 0.5em auto 0;
     text-align: center;
-    margin-top: 1.5em;
+    width: max-content;
 
     > span {
-      height: 2em;
-      display: flex;
       align-items: center;
+      display: flex;
+      height: 1.6em;
       justify-content: center;
     }
 
     a {
-      background-color: var(--text);
+      background-color: var(--secondary);
       color: var(--background);
-      text-decoration: none;
       display: inline-block;
+      height: 1.6em;
+      line-height: 1.6em;
+      text-decoration: none;
       width: 100%;
-      height: 2em;
-      line-height: 2em;
 
       &:focus {
         outline: none;
-        background-color: var(--secondary);
+        background-color: var(--primary);
       }
 
       &:active,
       &:hover {
-        background-color: var(--secondary);
+        background-color: var(--primary);
       }
     }
   }
 }
 
 @media (min-width: 768px) {
-  .layout-archive {
-    header {
-      justify-content: flex-end;
-      padding: 1em 5em 1em 1em;
-    }
-
-    article {
-      margin: 0 5em 0 0;
-      padding: calc(20vw + 3em) 3em 6.5em 5em;
-    }
-  }
-
   .archive {
-    & &__years {
-      display: block;
-    }
+    padding: 3.8em;
   }
 }

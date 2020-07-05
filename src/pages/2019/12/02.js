@@ -1,11 +1,11 @@
 import React from "react"
 import { dateFromUrl } from "../../../lib/utils"
-import Layout, { fonts } from "../../../layouts/first"
+import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 
 export const frontmatter = {
-  url: "/2020/01/30",
-  subheadline: "graphic design is my passion"
+  url: "/2019/12/02",
+  subheadline: "DESFCEMBER"
 }
 
 const date = dateFromUrl(frontmatter.url)

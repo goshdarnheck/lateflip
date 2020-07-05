@@ -8,9 +8,9 @@ import Logo from "../../components/svg/lateflip-logo"
 
 import "./archive.scss"
 
-export const fonts = ["Montserrat", "Source+Code+Pro:wght@900"]
+export const fonts = ["Roboto", "Source+Code+Pro:wght@900"]
 
-const Archive = ({ children }) => (
+const Archive = ({ children, subheadline, date }) => (
   <div className="layout layout-archive">
     <main>
       <Top />
@@ -19,7 +19,10 @@ const Archive = ({ children }) => (
           <Logo />
         </Link>
       </header>
-      <article>{children}</article>
+      <article>
+        <h1>{subheadline}</h1>
+        {children}
+      </article>
     </main>
     <Footer />
   </div>

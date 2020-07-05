@@ -1,11 +1,11 @@
 import React from "react"
 import { dateFromUrl } from "../../../lib/utils"
-import Layout, { fonts } from "../../../layouts/first"
+import Layout, { fonts } from "../../../layouts/jazzy"
 import SEO from "../../../components/seo"
 
 export const frontmatter = {
-  url: "/2020/01/30",
-  subheadline: "graphic design is my passion"
+  url: "/2019/01/02",
+  subheadline: "this is a new old test"
 }
 
 const date = dateFromUrl(frontmatter.url)
@@ -20,24 +20,6 @@ const Page = () => (
       <li>
         <h3>testing</h3>
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
     </ul>
   </Layout>
 )

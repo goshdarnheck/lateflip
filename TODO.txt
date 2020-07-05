@@ -1,2 +1,0 @@
-- style unique 404 page
-- style about page

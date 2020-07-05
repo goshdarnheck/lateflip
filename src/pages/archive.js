@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { DateTime } from "luxon"
+import { dateFromUrl } from "../../lib/utils"
 
 import Layout, { fonts }  from "../layouts/archive"
 import SEO from "../components/seo"
@@ -11,7 +12,7 @@ const ArchiveMonth = ({ month, year, pages }) => {
   let days = []
 
   while (!date.hasSame(endDate.plus({ days: 1 }), "day")) {
-    const key = date.toFormat("dm");
+    const key = date.toFormat("dL");
 
     if (date.month !== endDate.month) {
       days.push(<span key={key}></span>)
@@ -47,9 +48,11 @@ const ArchivePage = ({ data }) => {
 
   data.allJavascriptFrontmatter.edges
     .map(edge => {
+      const isoDate = dateFromUrl(edge.node.frontmatter.url)
+
       return {
         ...edge.node.frontmatter,
-        luxonDate: DateTime.fromISO(edge.node.frontmatter.day),
+        luxonDate: DateTime.fromISO(isoDate),
       }
     })
     .sort((a, b) => {
@@ -74,9 +77,8 @@ const ArchivePage = ({ data }) => {
     })
 
   return (
-    <Layout>
+    <Layout subheadline="Archive">
       <SEO fonts={fonts} title="Archive" />
-      <h1>Archive</h1>
       <div className="archive">
         <ul className="archive__years">
           {Object.keys(pageTree).map(year => (
@@ -108,7 +110,6 @@ export const query = graphql`
         node {
           frontmatter {
             error
-            day
             subheadline
             url
           }
