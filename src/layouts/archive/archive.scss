@@ -47,7 +47,7 @@
     color: var(--background);
     margin: 0;
     overflow-x: hidden;
-    padding: calc(20vw + 1em) 0 4em 0;
+    padding: calc(24vw + 1em) 2em 4em;
     position: relative;
 
     h1 {
@@ -68,8 +68,6 @@
 }
 
 .archive {
-  padding: 0 1.6em;
-
   ul {
     list-style: none;
     margin: 0;
@@ -156,7 +154,9 @@
 }
 
 @media (min-width: 768px) {
-  .archive {
-    padding: 3.8em;
+  .layout-archive {
+    article {
+      padding: calc(24vw + 1em) 4em 5em;
+    }
   }
 }
