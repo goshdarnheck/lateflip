@@ -1,7 +1,6 @@
 - style unique 404 page
 - style about page
 - get pages in page and try to find a "previous" page
-- build daily pages dynamically...?
 
 # ideas
 
