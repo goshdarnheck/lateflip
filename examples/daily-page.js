@@ -1,8 +1,5 @@
 import React from "react"
-import { DateTime } from "luxon"
-
-// Import a layout component and it's font list
-import Layout, { fonts } from "../../../layouts/jazzy"
+import { dateFromUrl } from "../../../lib/utils"
 
 // The SEO component wraps react-helmet
 // it accepts these props:
@@ -14,17 +11,25 @@ import Layout, { fonts } from "../../../layouts/jazzy"
 // - meta - an array of extra meta data objects in the shape of { name: ``, content: `` }
 import SEO from "../../../components/seo"
 
-// Including these fields will add the page to the archive
+// Import a layout component and it's font list
+import Layout, { fonts } from "../../../layouts/jazzy"
+
+
+// Including these fields will add the "daily page" to the archive
 export const frontmatter = {
   url: "/2019/01/02",
-  subheadline: "this is a new old test"
+  subheadline: "this is a new old test",
 }
 
-const date = DateTime.fromISO(frontmatter.day)
+const date = dateFromUrl(frontmatter.url)
 
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline} date={date}>
     <SEO fonts={fonts} title={date} canonicalUrl={date} />
+    {/*
+      Layouts follow a convention of styling a `.grid` element,
+      although a page does not have to implement one
+      */}
     <ul className="grid">
       <li>
         <h2>TEST</h2>

@@ -1,6 +1,7 @@
 import React from "react"
-import { dateFromUrl } from "../../../lib/utils"import Layout, { fonts } from "../../../layouts/jazzy"
+import { dateFromUrl } from "../../../lib/utils"
 import SEO from "../../../components/seo"
+import Layout, { fonts } from "../../../layouts/jazzy"
 import Logo from "../../../components/svg/lateflip-logo"
 import "./cube.scss"
 

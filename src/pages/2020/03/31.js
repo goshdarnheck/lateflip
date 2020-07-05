@@ -1,7 +1,7 @@
 import React from "react"
 import { dateFromUrl } from "../../../lib/utils"
-import Layout, { fonts } from "../../../layouts/cornflakes"
 import SEO from "../../../components/seo"
+import Layout, { fonts } from "../../../layouts/cornflakes"
 
 export const frontmatter = {
   url: "/2020/03/31",
