@@ -3,7 +3,6 @@ import React from "react"
 
 const Footer = () => (
   <footer className="footer">
-    <div>© {new Date().getFullYear()} lateflip.com</div>
     <nav>
       <ul>
         <li>
@@ -17,6 +16,7 @@ const Footer = () => (
         </li>
       </ul>
     </nav>
+    <small>© {new Date().getFullYear()} lateflip.com</small>
   </footer>
 )
 
