@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { DateTime } from "luxon"
-import { dateFromUrl } from "../../lib/utils"
+import { dateFromUrl } from "../lib/utils"
 
 import Layout, { fonts }  from "../layouts/archive"
 import SEO from "../components/seo"
