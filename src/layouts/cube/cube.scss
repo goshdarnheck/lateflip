@@ -6,34 +6,6 @@
   --heading-font: "Montserrat", sans-serif;
   --body-font: "Railway", sans-serif;
 
-  @keyframes glow {
-    from {
-      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #f00, -1px 1px 1px #00f,
-        1px -1px 1px #f0f;
-    }
-
-    to {
-      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff,
-        1px -1px 1px #fff;
-    }
-  }
-
-  @keyframes glowbox {
-    from {
-      box-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #f00, -1px 1px 1px #00f,
-        1px -1px 1px #f0f;
-    }
-
-    to {
-      box-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff,
-        1px -1px 1px #fff;
-    }
-  }
-
   background-image: linear-gradient(
       201deg,
       rgba(148, 148, 148, 0.07) 0%,
@@ -180,7 +152,6 @@
   }
 
   .grid > li {
-    animation: glowbox 3s 0s infinite alternate;
     background: rgba(255, 255, 255, 0.35);
     background: linear-gradient(
         151deg,
@@ -194,6 +165,9 @@
         rgba(255, 255, 255, 0) 100%
       );
     border: 2px solid var(--background);
+    box-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+      0 0 0.2em #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff,
+      1px -1px 1px #fff;
     color: var(--text);
     display: flex;
     height: 60vw;
@@ -221,7 +195,6 @@
 
     a {
       color: var(--text);
-      animation: glow 3s 0s infinite alternate;
       font-family: var(--heading-font);
       font-weight: 400;
       text-decoration: none;
@@ -279,8 +252,11 @@
 
     li {
       align-items: center;
-      animation: glowbox 3s 0s infinite alternate;
+      background-color: var(--background);
       border: 0.2em solid var(--background);
+      box-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+        0 0 0.2em #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff,
+        1px -1px 1px #fff;
       display: flex;
       height: 4em;
       justify-content: center;
@@ -312,17 +288,19 @@
     }
 
     button {
-      font-family: arial, sans-serif;
-      margin-top: -0.1em;
-      line-height: 1;
-      animation: glow 3s 0s infinite alternate;
       appearance: none;
-      color: var(--background);
       background-color: transparent;
       border: 0;
       border-radius: 0;
+      color: var(--background);
+      font-family: arial, sans-serif;
       font-size: 4em;
+      line-height: 1;
+      margin-top: -0.1em;
       padding: 0;
+      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #f00, -1px 1px 1px #00f,
+        1px -1px 1px #f0f;
 
       &:hover {
         color: var(--primary);

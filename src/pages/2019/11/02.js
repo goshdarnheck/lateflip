@@ -11,7 +11,7 @@ export const frontmatter = {
 }
 
 const date = dateFromUrl(frontmatter.url)
-// ᠅⁂ ‡ †
+
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline} date={date}>
     <SEO
@@ -25,7 +25,7 @@ const Page = () => (
         <CardVideo
           title={`Jarne Verbruggen's "Professional Life" Part`}
           youtubeId="mIkWPoeHlvM"
-          length="12min"
+          details="Video - 12m"
           extras={[
             <a href="https://www.thrashermagazine.com/">Thrasher</a>,
             <a href="https://www.instagram.com/jarneverbruggen/">
@@ -38,35 +38,30 @@ const Page = () => (
         <CardVideo
           title="Wild Ride! with Steve-O - Episode #1 Tony Hawk"
           youtubeId="V143LeToeO0"
-          length="52min"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
           youtubeId="B0Tyk4rj3hs"
-          length="16min"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
           youtubeId="B0Tyk4rj3hs"
-          length="16min"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
           youtubeId="B0Tyk4rj3hs"
-          length="16min"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
           youtubeId="B0Tyk4rj3hs"
-          length="16min"
         />
       </li>
     </ul>

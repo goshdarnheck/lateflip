@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const CardVideo = ({ url, title, thumbnail, length, youtubeId, extras }) => {
+const CardVideo = ({ url, title, thumbnail, details, youtubeId, extras }) => {
   if (youtubeId) {
     url = `https://www.youtube.com/watch?v=${youtubeId}`
     thumbnail = `https://i.ytimg.com/vi/${youtubeId}/maxresdefault.jpg`
@@ -17,7 +17,7 @@ const CardVideo = ({ url, title, thumbnail, length, youtubeId, extras }) => {
           <img alt="" src={thumbnail} />
         </a>
       </div>
-      <div className="details">Video - {length}</div>
+      {details && <div className="details"></div>}
       {extras && (
         <ul className="extras">
           {extras.map((extra, i) => (
