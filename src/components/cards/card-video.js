@@ -9,14 +9,12 @@ const CardVideo = ({ url, title, thumbnail, details, youtubeId, extras }) => {
 
   return (
     <div className="card card-video">
-      <h2>
-        <a href={url}>{title}</a>
-      </h2>
-      <div className="image">
-        <a href={url}>
+      <a href={url}>
+        <h2>{title}</h2>
+        <div className="image">
           <img alt="" src={thumbnail} />
-        </a>
-      </div>
+        </div>
+      </a>
       {details && <div className="details"></div>}
       {extras && (
         <ul className="extras">

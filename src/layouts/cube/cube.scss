@@ -154,14 +154,13 @@
   .grid > li {
     background: rgba(255, 255, 255, 0.35);
     background: linear-gradient(
-        151deg,
-        rgba(255, 255, 255, 0.7931373232886905) 0%,
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
         rgba(255, 255, 255, 0) 100%
       ),
       linear-gradient(
-        324deg,
-        rgba(255, 255, 255, 0.8127451664259454) 0%,
-        rgba(255, 255, 255, 0.5606443260898109) 32%,
+        0deg,
+        rgba(247, 247, 247, 0.5) 0%,
         rgba(255, 255, 255, 0) 100%
       );
     border: 2px solid var(--background);
@@ -175,29 +174,63 @@
     font-weight: 400;
     flex-direction: column;
     justify-content: center;
-    padding: 2em;
+    padding: 6vw;
     position: absolute;
     text-align: center;
     width: 60vw;
 
     h2 {
       margin-top: 0;
+      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
+        -1px 1px 1px #00f, 1px -1px 1px #f0f;
+      transition: text-shadow 500ms;
+    }
+
+    .card {
+      color: var(--background);
+      opacity: 0.3;
+      transition: opacity 800ms, filter 800ms;
+      filter: grayscale(100);
     }
 
     .image {
       margin-bottom: 1em;
+      display: flex;
+      justify-content: center;
 
       img {
-        display: block;
-        width: 100%;
+        transition: filter 500ms;
+        width: 60%;
       }
     }
 
     a {
-      color: var(--text);
+      color: var(--background);
       font-family: var(--heading-font);
       font-weight: 400;
       text-decoration: none;
+      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
+        -1px 1px 1px #00f, 1px -1px 1px #f0f;
+      transition: text-shadow 500ms;
+
+      &:hover,
+      &:focus {
+        text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+          0 0 0.2em #fff, 1px 1px 1px #00f, -1px -1px 1px #0f0, 1px 2px 3px #f0f,
+          -1px 1px 1px #00f, 1px -1px 1px #f0f;
+
+        h2 {
+          text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+            0 0 0.2em #fff, 1px 1px 1px #00f, -1px -1px 1px #0f0,
+            1px 2px 3px #f0f, -1px 1px 1px #00f, 1px -1px 1px #f0f;
+        }
+
+        img {
+          filter: saturate(10);
+        }
+      }
     }
 
     .extras {
@@ -243,12 +276,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    height: 12em;
+    height: 24vw;
     list-style: none;
     margin: 2em auto 0;
     padding: 0;
     position: relative;
-    width: 16em;
+    width: 32vw;
 
     li {
       align-items: center;
@@ -258,9 +291,9 @@
         0 0 0.2em #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff,
         1px -1px 1px #fff;
       display: flex;
-      height: 4em;
+      height: 8vw;
       justify-content: center;
-      width: 4em;
+      width: 8vw;
 
       &:nth-child(1) {
         grid-area: 3 / 2 / 4 / 3;
@@ -294,22 +327,28 @@
       border-radius: 0;
       color: var(--background);
       font-family: arial, sans-serif;
-      font-size: 4em;
+      font-size: 8vw;
       line-height: 1;
       margin-top: -0.1em;
       padding: 0;
       text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #f00, -1px 1px 1px #00f,
-        1px -1px 1px #f0f;
+        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
+        -1px 1px 1px #00f, 1px -1px 1px #f0f;
+      transition: text-shadow 500ms;
+
+      &:focus,
+      &:hover {
+        text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
+          0 0 0.2em #fff, 1px 1px 1px #00f, -1px -1px 1px #0f0, 1px 2px 3px #f0f,
+          -1px 1px 1px #00f, 1px -1px 1px #f0f;
+      }
 
       &:hover {
-        color: var(--primary);
         cursor: pointer;
       }
 
       &:focus {
         outline: none;
-        color: var(--secondary);
       }
     }
   }
@@ -321,5 +360,15 @@
   .side-4 .cube-controls li:nth-child(5) button,
   .side-5 .cube-controls li:nth-child(6) button {
     color: var(--text);
+  }
+
+  .side-0 .grid > li:nth-child(1) .card,
+  .side-1 .grid > li:nth-child(2) .card,
+  .side-2 .grid > li:nth-child(3) .card,
+  .side-3 .grid > li:nth-child(4) .card,
+  .side-4 .grid > li:nth-child(5) .card,
+  .side-5 .grid > li:nth-child(6) .card {
+    opacity: 1;
+    filter: grayscale(0);
   }
 }
