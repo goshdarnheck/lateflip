@@ -75,6 +75,10 @@
     padding: 2em 0;
   }
 
+  article {
+    margin: 0 auto;
+  }
+
   header {
     text-transform: uppercase;
 
@@ -285,14 +289,13 @@
 
     li {
       align-items: center;
-      background-color: var(--background);
+      background-color: rgba(255, 255, 255, 0.2);
       border: 0.2em solid var(--background);
-      box-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #fff, -1px -1px 1px #fff, -1px 1px 1px #fff,
-        1px -1px 1px #fff;
+      box-shadow: inset 0 0 2em #fff, 0 0 2em #fff;
       display: flex;
       height: 8vw;
       justify-content: center;
+      transition: background 500ms;
       width: 8vw;
 
       &:nth-child(1) {
@@ -353,13 +356,13 @@
     }
   }
 
-  .side-0 .cube-controls li:nth-child(1) button,
-  .side-1 .cube-controls li:nth-child(2) button,
-  .side-2 .cube-controls li:nth-child(3) button,
-  .side-3 .cube-controls li:nth-child(4) button,
-  .side-4 .cube-controls li:nth-child(5) button,
-  .side-5 .cube-controls li:nth-child(6) button {
-    color: var(--text);
+  .side-0 .cube-controls li:nth-child(1),
+  .side-1 .cube-controls li:nth-child(2),
+  .side-2 .cube-controls li:nth-child(3),
+  .side-3 .cube-controls li:nth-child(4),
+  .side-4 .cube-controls li:nth-child(5),
+  .side-5 .cube-controls li:nth-child(6) {
+    background-color: #fff;
   }
 
   .side-0 .grid > li:nth-child(1) .card,
@@ -370,5 +373,117 @@
   .side-5 .grid > li:nth-child(6) .card {
     opacity: 1;
     filter: grayscale(0);
+  }
+}
+
+@media (min-width: 768px) {
+  $cubeBase: 500;
+
+  .layout-cube {
+    header {
+      text-transform: uppercase;
+
+      > div:first-child {
+        font-size: 5vw;
+        letter-spacing: 0.1em;
+      }
+
+      > div:last-child {
+        margin: 0.2em 0 2em;
+
+        span,
+        h1,
+        h2 {
+          font-size: calc(0.4em + 0.7vw);
+          margin: 0 0.5em;
+        }
+      }
+    }
+
+    .cube {
+      height: #{$cubeBase}px;
+      perspective: #{$cubeBase * 2}px;
+      width: #{$cubeBase}px;
+    }
+
+    .grid {
+      width: #{$cubeBase}px;
+      height: #{$cubeBase}px;
+      transform: translateZ(-100px);
+    }
+
+    .grid > li {
+      height: #{$cubeBase}px;
+      font-size: 16px;
+      padding: 20px;
+      width: #{$cubeBase}px;
+    }
+
+    .side-0 .cube .grid {
+      transform: translateZ(-#{$cubeBase / 2}px) rotateY(0deg);
+    }
+
+    .side-2 .cube .grid {
+      transform: translateZ(-#{$cubeBase / 2}px) rotateY(-90deg);
+    }
+
+    .side-1 .cube .grid {
+      transform: translateZ(-#{$cubeBase / 2}px) rotateY(-180deg);
+    }
+
+    .side-3 .cube .grid {
+      transform: translateZ(-#{$cubeBase / 2}px) rotateY(90deg);
+    }
+
+    .side-4 .cube .grid {
+      transform: translateZ(-#{$cubeBase / 2}px) rotateX(-90deg);
+    }
+
+    .side-5 .cube .grid {
+      transform: translateZ(-#{$cubeBase / 2}px) rotateX(90deg);
+    }
+
+    .grid > li {
+      &:nth-child(1) {
+        transform: rotateY(0deg) translateZ(#{$cubeBase / 2}px);
+      }
+
+      &:nth-child(2) {
+        transform: rotateY(180deg) translateZ(#{$cubeBase / 2}px);
+      }
+
+      &:nth-child(3) {
+        transform: rotateY(90deg) translateZ(#{$cubeBase / 2}px);
+      }
+
+      &:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(#{$cubeBase / 2}px);
+      }
+
+      &:nth-child(5) {
+        transform: rotateX(90deg) translateZ(#{$cubeBase / 2}px);
+      }
+
+      &:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(#{$cubeBase / 2}px);
+      }
+    }
+
+    .cube-controls {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      height: 12em;
+      margin: 2em auto 0;
+      width: 16em;
+
+      li {
+        height: 4em;
+        width: 4em;
+      }
+
+      button {
+        font-size: 4em;
+      }
+    }
   }
 }
