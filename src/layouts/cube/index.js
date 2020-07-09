@@ -32,22 +32,22 @@ const Cube = ({ children, subheadline, date }) => {
           <div className="cube">{children}</div>
           <ul className="cube-controls">
             <li>
-              <button onClick={() => setSide(0)}>∺</button>
+              <button aria-label="Rotate to side one" onClick={() => setSide(0)}></button>
             </li>
             <li>
-              <button onClick={() => setSide(1)}>∾</button>
+              <button aria-label="Rotate to side two" onClick={() => setSide(1)}></button>
             </li>
             <li>
-              <button onClick={() => setSide(2)}>≏</button>
+              <button aria-label="Rotate to side three" onClick={() => setSide(2)}></button>
             </li>
             <li>
-              <button onClick={() => setSide(3)}>≒</button>
+              <button aria-label="Rotate to side four" onClick={() => setSide(3)}></button>
             </li>
             <li>
-              <button onClick={() => setSide(4)}>≋</button>
+              <button aria-label="Rotate to side five" onClick={() => setSide(4)}></button>
             </li>
             <li>
-              <button onClick={() => setSide(5)}>≄</button>
+              <button aria-label="Rotate to side six" onClick={() => setSide(5)}></button>
             </li>
           </ul>
         </article>

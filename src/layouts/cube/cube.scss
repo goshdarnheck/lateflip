@@ -82,13 +82,6 @@
   header {
     text-transform: uppercase;
 
-    > div:first-child {
-      font-family: var(--heading-font);
-      font-size: 5vw;
-      letter-spacing: 0.1em;
-      text-align: center;
-    }
-
     a {
       color: var(--text);
       text-decoration: none;
@@ -97,6 +90,13 @@
       &:focus {
         text-decoration: line-through;
       }
+    }
+
+    > div:first-child {
+      font-family: var(--heading-font);
+      font-size: 5vw;
+      letter-spacing: 0.1em;
+      text-align: center;
     }
 
     > div:last-child {
@@ -185,10 +185,15 @@
 
     h2 {
       margin-top: 0;
-      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
-        -1px 1px 1px #00f, 1px -1px 1px #f0f;
+      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 0 -0.2em 0.9em #fff,
+        0 -0.2em 0.6em #fff, 0 0 0.3em #fff, 0 0 0.2em #fff, 1px 1px 1px #0f0,
+        -1px -1px 1px #000, 1px 2px 3px #000, -1px 1px 1px #00f,
+        1px -1px 1px #f0f;
       transition: text-shadow 500ms;
+      font-family: var(--heading-font);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      font-variant: small-caps;
     }
 
     .card {
@@ -214,9 +219,10 @@
       font-family: var(--heading-font);
       font-weight: 400;
       text-decoration: none;
-      text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
-        0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
-        -1px 1px 1px #00f, 1px -1px 1px #f0f;
+      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 0 -0.2em 0.9em #fff,
+        0 -0.2em 0.6em #fff, 0 0 0.3em #fff, 0 0 0.2em #fff, 1px 1px 1px #0f0,
+        -1px -1px 1px #000, 1px 2px 3px #000, -1px 1px 1px #00f,
+        1px -1px 1px #f0f;
       transition: text-shadow 500ms;
 
       &:hover,
@@ -291,12 +297,16 @@
       align-items: center;
       background-color: rgba(255, 255, 255, 0.2);
       border: 0.2em solid var(--background);
-      box-shadow: inset 0 0 2em #fff, 0 0 2em #fff;
+      box-shadow: inset 0 0 2em var(--background), 0 0 2em var(--background);
       display: flex;
       height: 8vw;
       justify-content: center;
       transition: background 500ms;
       width: 8vw;
+
+      &:hover {
+        background-color: var(--background);
+      }
 
       &:nth-child(1) {
         grid-area: 3 / 2 / 4 / 3;
@@ -338,6 +348,8 @@
         0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
         -1px 1px 1px #00f, 1px -1px 1px #f0f;
       transition: text-shadow 500ms;
+      width: 100%;
+      height: 100%;
 
       &:focus,
       &:hover {
@@ -362,7 +374,7 @@
   .side-3 .cube-controls li:nth-child(4),
   .side-4 .cube-controls li:nth-child(5),
   .side-5 .cube-controls li:nth-child(6) {
-    background-color: #fff;
+    background-color: var(--background);
   }
 
   .side-0 .grid > li:nth-child(1) .card,
@@ -380,22 +392,34 @@
   $cubeBase: 500;
 
   .layout-cube {
+    main {
+      align-items: center;
+      display: flex;
+    }
+
     header {
+      display: flex;
+      height: calc(100vh - 7.2em);
+      padding-left: 2em;
+      position: relative;
       text-transform: uppercase;
+      width: 10em;
 
       > div:first-child {
-        font-size: 5vw;
+        writing-mode: sideways-lr;
+        font-size: 2.2em;
         letter-spacing: 0.1em;
       }
 
       > div:last-child {
+        writing-mode: sideways-lr;
         margin: 0.2em 0 2em;
 
         span,
         h1,
         h2 {
-          font-size: calc(0.4em + 0.7vw);
-          margin: 0 0.5em;
+          font-size: 0.8em;
+          margin: 0.5em 0;
         }
       }
     }
@@ -415,7 +439,7 @@
     .grid > li {
       height: #{$cubeBase}px;
       font-size: 16px;
-      padding: 20px;
+      padding: #{$cubeBase * 0.1}px;
       width: #{$cubeBase}px;
     }
 
