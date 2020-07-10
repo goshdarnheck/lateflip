@@ -24,7 +24,7 @@ const Page = () => (
       <li>
         <CardVideo
           title={`Jarne Verbruggen's "Professional Life" Part`}
-          youtubeId="mIkWPoeHlvM"
+          id="mIkWPoeHlvM"
           details="Video - 12m"
           extras={[
             <a href="https://www.thrashermagazine.com/">Thrasher</a>,
@@ -32,36 +32,42 @@ const Page = () => (
               Jarne Verbruggen
             </a>,
           ]}
+          type="youtube"
         />
       </li>
       <li>
         <CardVideo
           title="Wild Ride! with Steve-O - Episode #1 Tony Hawk"
-          youtubeId="V143LeToeO0"
+          id="V143LeToeO0"
+          type="youtube"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
-          youtubeId="B0Tyk4rj3hs"
+          id="B0Tyk4rj3hs"
+          type="youtube"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
-          youtubeId="B0Tyk4rj3hs"
+          id="B0Tyk4rj3hs"
+          type="youtube"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
-          youtubeId="B0Tyk4rj3hs"
+          id="B0Tyk4rj3hs"
+          type="youtube"
         />
       </li>
       <li>
         <CardVideo
           title="Venture vs Thunder!"
-          youtubeId="B0Tyk4rj3hs"
+          id="B0Tyk4rj3hs"
+          type="youtube"
         />
       </li>
     </ul>

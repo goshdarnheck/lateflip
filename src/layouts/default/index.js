@@ -15,13 +15,13 @@ const Default = ({ children }) => (
     <main>
       <Top />
       <header>
-        <h1>
-          <Link to="/">
-            <Logo />
-          </Link>
-        </h1>
+        <Link to="/">
+          <Logo />
+        </Link>
       </header>
-      <article>{children}</article>
+      <article>
+        <div>{children}</div>
+      </article>
     </main>
     <Footer />
   </div>

@@ -5,6 +5,7 @@
 # ideas
 
 - archive search that highlights matches (title, post tags)
+- don't show future dates in the archive
 
 # using Lateflip
 

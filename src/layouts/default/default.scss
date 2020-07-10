@@ -1,48 +1,120 @@
 .layout-default {
-  font-family: Montserrat, sans-serif;
+  --background: rgb(50, 134, 29);
+  --text: rgb(253, 251, 224);
+  --primary: #fff;
+  --secondary: rgb(100, 198, 255);
+  --accent: rgb(77, 13, 18);
+  --heading-font: "Montserrat", "comic sans ms", sans-serif;
+  --body-font: "Raleway", sans-serif;
+
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+
+  main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
 
   header {
-    padding: 1em;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
 
-    h1 {
-      margin: 0;
+    a {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .lateflip-logo {
+      animation: Float 3s linear 0s infinite;
+    }
+
+    .lateflip-logo-top {
+      animation: DefaultFade 10s linear 0s infinite;
+    }
+
+    .lateflip-logo-side {
+      fill: rgb(148, 155, 149);
+    }
+
+    .lateflip-logo-shadow {
+      fill: var(--accent);
+      fill: transparent;
     }
   }
 
   article {
-    background-color: #007fff;
-    color: white;
-    margin: 5em 0 10em;
-    padding: 5em 10% 6.5em 3em;
+    color: var(--text);
+    background-color: var(--background);
+    flex-grow: 1;
+    clip-path: polygon(
+      50% 6%,
+      70% 0,
+      85% 6%,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 0,
+      14% 6%,
+      31% 0
+    );
+
+    > div {
+      padding: 5em 2em;
+      max-width: 50em;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-family: var(--heading-font);
+      font-size: 16vw;
+      font-weight: 400;
+    }
+
+    h1 + p {
+      margin-top: 2em;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+  }
+}
+
+@keyframes Float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(0, 0.5em);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  75% {
+    transform: translate(0, -0.5em);
   }
 }
 
 @keyframes DefaultFade {
   0% {
-    fill: #fff;
+    fill: var(--text);
   }
 
-  15% {
-    fill: #fff;
-  }
-
-  45% {
-    fill: #f0f;
-  }
-
-  55% {
-    fill: #f0f;
-  }
-
-  85% {
-    fill: #fff;
+  50% {
+    fill: var(--primary);
   }
 
   100% {
-    fill: #fff;
+    fill: var(--text);
   }
-}
-
-.layout-default .lateflip-logo-top {
-  animation: DefaultFade 10s linear 0s infinite;
 }

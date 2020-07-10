@@ -1,10 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const CardVideo = ({ url, title, thumbnail, details, youtubeId, extras }) => {
-  if (youtubeId) {
-    url = `https://www.youtube.com/watch?v=${youtubeId}`
-    thumbnail = `https://i.ytimg.com/vi/${youtubeId}/maxresdefault.jpg`
+const CardVideo = ({
+  url,
+  title,
+  thumbnail,
+  details,
+  id,
+  type,
+  extras,
+  thumbnailQuality = "maxresdefault",
+}) => {
+  if (type === 'youtube') {
+    url = `https://www.youtube.com/watch?v=${id}`
+
+    switch (thumbnailQuality) {
+      case "maxresdefault":
+        thumbnail = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
+        break
+      case "hqdefault":
+      default:
+        thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`
+        break
+    }
   }
 
   return (

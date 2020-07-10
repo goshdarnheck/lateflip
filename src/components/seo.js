@@ -4,11 +4,11 @@ import Helmet from "react-helmet"
 import { DateTime } from "luxon"
 
 function SEO({ fonts, canonicalUrl, description, lang = "en", meta, title }) {
-  const allFonts = ["Montserrat", "Railway", ...fonts]
+  const allFonts = ["Montserrat", "Raleway", ...fonts]
   const fontString = allFonts.reduce((acc, value) => {
     const family = `family=${value.replace(" ", "+")}`
     return acc === "" ? family : acc + `&${family}`
-  })
+  }, '')
 
   const finalTitle =
     typeof title === "string" ? title : title.toLocaleString(DateTime.DATE_FULL)
@@ -79,6 +79,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  fonts: []
 }
 
 SEO.propTypes = {

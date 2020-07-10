@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { DateTime } from "luxon"
 import { dateFromUrl } from "../lib/utils"
 
-import Layout, { fonts }  from "../layouts/archive"
+import Layout, { fonts } from "../layouts/archive"
 import SEO from "../components/seo"
 
 const ArchiveMonth = ({ month, year, pages }) => {
@@ -12,14 +12,21 @@ const ArchiveMonth = ({ month, year, pages }) => {
   let days = []
 
   while (!date.hasSame(endDate.plus({ days: 1 }), "day")) {
-    const key = date.toFormat("dL");
+    const key = date.toFormat("dL")
 
     if (date.month !== endDate.month) {
       days.push(<span key={key}></span>)
     } else if (pages[date.day]) {
       days.push(
         <span key={key}>
-          <Link to={pages[date.day].url} title={`${pages[date.day].subheadline} - ${date.toLocaleString(DateTime.DATE_HUGE)}`}>{date.toFormat("d")}</Link>
+          <Link
+            to={pages[date.day].url}
+            title={`${pages[date.day].subheadline} - ${date.toLocaleString(
+              DateTime.DATE_HUGE
+            )}`}
+          >
+            {date.toFormat("d")}
+          </Link>
         </span>
       )
     } else {
@@ -78,7 +85,11 @@ const ArchivePage = ({ data }) => {
 
   return (
     <Layout subheadline="Archive">
-      <SEO fonts={fonts} title="Archive" />
+      <SEO
+        fonts={fonts}
+        title="Archive"
+        description="The vast archives of the Lateflip Skateboarding Website. Pages of links to things about skateboarding."
+      />
       <div className="archive">
         <ul className="archive__years">
           {Object.keys(pageTree).map(year => (
