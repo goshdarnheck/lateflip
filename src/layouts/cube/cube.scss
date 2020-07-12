@@ -496,17 +496,17 @@
     .cube-controls {
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
-      height: 12em;
-      margin: 2em auto 0;
-      width: 16em;
+      height: 9em;
+      margin: 2.5em auto 0;
+      width: 12em;
 
       li {
-        height: 4em;
-        width: 4em;
+        height: 3em;
+        width: 3em;
       }
 
       button {
-        font-size: 4em;
+        font-size: 3em;
       }
     }
   }
