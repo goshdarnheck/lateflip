@@ -1,0 +1,60 @@
+// This file is meant to be a starting point for styling new layouts
+// not all layouts need or have these elements
+
+.layout-layoutname {
+  --background: #333;
+  --text: #bbb;
+  --primary: #7a0;
+  --secondary: #a0f;
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Raleway", sans-serif;
+
+  background-color: var(--secondary);
+  color: var(--text);
+  // font-family: var(--body-font);
+
+  main {
+    outline: 1px dashed red;
+  }
+
+  header {
+    outline: 1px dashed blue;
+
+    .lateflip-logo:hover {
+      .lateflip-logo-top {
+        fill: var(--secondary);
+      }
+
+      .lateflip-logo-side {
+        fill: var(--background);
+      }
+
+      .lateflip-logo-shadow {
+        fill: var(--text);
+      }
+    }
+
+    .lateflip-logo-top {
+      fill: var(--text);
+    }
+
+    .lateflip-logo-side {
+      fill: var(--background);
+    }
+
+    .lateflip-logo-shadow {
+      fill: transparent;
+    }
+  }
+
+  article {
+    outline: 1px dashed green;
+  }
+
+  .grid {
+    outline: 1px dashed rebeccapurple;
+  }
+}
+
+@media (min-width: 768px) {
+}

@@ -11,16 +11,16 @@ const CardVideo = ({
   extras,
   thumbnailQuality = "maxresdefault",
 }) => {
-  if (type === 'youtube') {
+  if (type === "youtube") {
     url = `https://www.youtube.com/watch?v=${id}`
 
     switch (thumbnailQuality) {
+      case "hqdefault":
+        thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`
+        break
+      default:
       case "maxresdefault":
         thumbnail = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
-        break
-      case "hqdefault":
-      default:
-        thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`
         break
     }
   }

@@ -1,0 +1,79 @@
+.layout-mattdrian {
+  --background: #fff;
+  --text: #000;
+  --primary: rgb(199, 2, 2);
+  --secondary: rgb(235, 211, 1);
+  --accent: rgb(37, 56, 161);
+  --grey: #999;
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Raleway", sans-serif;
+
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--body-font);
+
+  main {
+    outline: 1px dashed red;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  header {
+    outline: 1px dashed blue;
+
+    > div {
+    }
+
+    .lateflip-logo:hover {
+      .lateflip-logo-top {
+        fill: var(--primary);
+      }
+
+      .lateflip-logo-side {
+        fill: var(--secondary);
+      }
+
+      .lateflip-logo-shadow {
+        fill: var(--accent);
+      }
+    }
+
+    .lateflip-logo-top {
+      fill: var(--text);
+    }
+
+    .lateflip-logo-side {
+      fill: var(--background);
+    }
+
+    .lateflip-logo-shadow {
+      fill: transparent;
+    }
+  }
+
+  article {
+    outline: 1px dashed green;
+  }
+
+  .grid {
+    background-color: var(--text);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 48vw));
+    grid-gap: 4vw;
+    transform: translateX(0vw);
+    width: calc(100% + 0vw);
+
+    li {
+      background-color: var(--background);
+    }
+  }
+
+  .card {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+}
