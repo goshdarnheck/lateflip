@@ -1,6 +1,6 @@
 import React from "react"
 import { dateFromUrl } from "../../../lib/utils"
-import SEO from "../../../components/seo"
+import { SEO } from "../../../components/common"
 import Layout, { fonts } from "../../../layouts/archive"
 import styled from "styled-components"
 

@@ -2,10 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import Top from "../../components/top"
-import Footer from "../../components/footer"
+import { Footer, HomeLink, Top } from "../../components/common"
 import Logo from "../../components/svg/lateflip-logo"
-
 import "./default.scss"
 
 export const fonts = ["Montserrat"]
@@ -15,9 +13,9 @@ const Default = ({ children }) => (
     <main>
       <Top />
       <header>
-        <Link to="/">
+        <HomeLink>
           <Logo />
-        </Link>
+        </HomeLink>
       </header>
       <article>
         <div>{children}</div>

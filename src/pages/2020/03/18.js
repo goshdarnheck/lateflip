@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { dateFromUrl } from "../../../lib/utils"
-import SEO from "../../../components/seo"
+import { SEO } from "../../../components/common"
 import Layout, { fonts } from "../../../layouts/jazzy"
 import Logo from "../../../components/svg/lateflip-logo"
 

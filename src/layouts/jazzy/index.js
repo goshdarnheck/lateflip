@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 import { Link } from "gatsby"
 
-import Top from "../../components/top"
-import Footer from "../../components/footer"
+import { Footer, HomeLink, Top } from "../../components/common"
 import Logo from "../../components/svg/lateflip-logo"
 import "./jazzy.scss"
 
@@ -16,9 +15,9 @@ const Jazzy = ({ children, subheadline, date }) => (
     <main>
       <header>
         <div>
-          <Link to="/" title="Take me home">
+          <HomeLink title="Take me home">
             <Logo />
-          </Link>
+          </HomeLink>
         </div>
         <div>
           <h1>{subheadline}</h1>

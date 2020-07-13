@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 import { Link } from "gatsby"
 
-import Top from "../../components/top"
-import Footer from "../../components/footer"
+import { Footer, HomeLink, Top } from "../../components/common"
 import "./cube.scss"
 
 export const fonts = ["Montserrat", "Poiret One"]
@@ -18,9 +17,9 @@ const Cube = ({ children, subheadline, date }) => {
       <main>
         <header>
           <div>
-            <Link to="/" title="Home">
+            <HomeLink>
               Flipping the Cube
-            </Link>
+            </HomeLink>
           </div>
           <div>
             <h1>{subheadline}</h1>

@@ -10,7 +10,7 @@ import { dateFromUrl } from "../../../lib/utils"
 // - description - meta description
 // - lang - page language, defaults to "en"
 // - meta - an array of extra meta data objects in the shape of { name: ``, content: `` }
-import SEO from "../../../components/seo"
+import { SEO } from "../../../components/common"
 
 // Import a layout component and it's font list
 import Layout, { fonts } from "../../../layouts/jazzy"

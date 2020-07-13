@@ -2,9 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 
-import HomeLink from "../../components/home-link"
-import Top from "../../components/top"
-import Footer from "../../components/footer"
+import { Footer, HomeLink, Top } from "../../components/common"
 import Logo from "../../components/svg/lateflip-logo"
 import "./mattdrian.scss"
 

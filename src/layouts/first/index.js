@@ -2,8 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import Top from "../../components/top"
-import Footer from "../../components/footer"
+import { Footer, HomeLink, Top } from "../../components/common"
 import Logo from "../../components/svg/lateflip-logo"
 import "./first.css"
 
@@ -20,9 +19,9 @@ const First = ({ children, subheadline }) => (
         }}
       >
         <h1 style={{ margin: 0 }}>
-          <Link to="/">
+          <HomeLink>
             <Logo />
-          </Link>
+          </HomeLink>
         </h1>
         {subheadline && (
           <div

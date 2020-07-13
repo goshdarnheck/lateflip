@@ -4,7 +4,7 @@ import { DateTime } from "luxon"
 import { dateFromUrl } from "../lib/utils"
 
 import Layout, { fonts } from "../layouts/archive"
-import SEO from "../components/seo"
+import { SEO } from "../components/common"
 
 const ArchiveMonth = ({ month, year, pages }) => {
   const endDate = DateTime.fromObject({ month, year }).endOf("month")

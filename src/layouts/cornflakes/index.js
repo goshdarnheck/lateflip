@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import { DateTime } from "luxon"
 import { Link } from "gatsby"
 
-import Top from "../../components/top"
-import Footer from "../../components/footer"
+import { Footer, HomeLink, Top } from "../../components/common"
 import "./cornflakes.scss"
 
 export const fonts = ["Montserrat", "Mr Dafoe", "Biryani:wght@800"]
@@ -16,11 +15,11 @@ const Cornflakes = ({ children, subheadline, date }) => (
       <div className="brand">Nobody's</div>
       <header>
         <div className="home-link">
-          <Link to="/" title="The Home Page Link">
+          <HomeLink>
             LATE
             <br />
             <span>FLIP</span>
-          </Link>
+          </HomeLink>
           <div>
             <h1><span>{subheadline}</span></h1>
             <h2>{date.toLocaleString(DateTime.DATE_FULL)}</h2>
