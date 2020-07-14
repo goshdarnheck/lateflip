@@ -42,31 +42,15 @@
     }
   }
 
-  .lateflip-logo {
+  .lateflip-icon {
     &:hover {
-      .lateflip-logo-top {
+      .lateflip-icon-l {
         fill: var(--primary);
       }
 
-      .lateflip-logo-side {
+      .lateflip-icon-f {
         fill: var(--secondary);
       }
-
-      .lateflip-logo-shadow {
-        fill: var(--accent);
-      }
-    }
-
-    &-top {
-      fill: var(--text);
-    }
-
-    &-side {
-      fill: var(--background);
-    }
-
-    &-shadow {
-      fill: transparent;
     }
   }
 
