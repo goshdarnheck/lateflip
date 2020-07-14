@@ -1,7 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { DateTime } from "luxon"
-import { Link } from "gatsby"
 
 import { Footer, HomeLink, Top } from "../../components/common"
 import "./cornflakes.scss"

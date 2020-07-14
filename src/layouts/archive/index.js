@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import { Footer, HomeLink, Top } from "../../components/common"
 import Logo from "../../components/svg/lateflip-logo"
