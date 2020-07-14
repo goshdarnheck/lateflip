@@ -5,26 +5,45 @@
   --secondary: rgb(235, 211, 1);
   --accent: rgb(37, 56, 161);
   --grey: #999;
-  --heading-font: "Montserrat", sans-serif;
-  --body-font: "Raleway", sans-serif;
+  --heading-font: "Josefin Sans", sans-serif;
 
   background-color: var(--background);
   color: var(--text);
   font-family: var(--body-font);
 
   main {
-    outline: 1px dashed red;
     overflow: hidden;
     width: 100%;
   }
 
   header {
-    outline: 1px dashed blue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1em;
+    height: 100%;
 
-    > div {
+    > div:nth-child(1) {
+      margin-bottom: 2em;
+      padding: 0 2em;
     }
 
-    .lateflip-logo:hover {
+    > div:nth-child(2) {
+      h1 {
+        font-family: var(--heading-font);
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+
+  .lateflip-logo {
+    &:hover {
       .lateflip-logo-top {
         fill: var(--primary);
       }
@@ -38,33 +57,43 @@
       }
     }
 
-    .lateflip-logo-top {
+    &-top {
       fill: var(--text);
     }
 
-    .lateflip-logo-side {
+    &-side {
       fill: var(--background);
     }
 
-    .lateflip-logo-shadow {
+    &-shadow {
       fill: transparent;
     }
-  }
-
-  article {
-    outline: 1px dashed green;
   }
 
   .grid {
     background-color: var(--text);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 48vw));
-    grid-gap: 4vw;
-    transform: translateX(0vw);
-    width: calc(100% + 0vw);
+    min-height: calc(100vh - 3.2em);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2vw;
 
     li {
       background-color: var(--background);
+      padding: 1em;
+    }
+
+    li:nth-child(2) {
+      background-color: var(--primary);
+      grid-row: span 2;
+    }
+
+    li:nth-child(6) {
+      background-color: var(--secondary);
+      grid-column: span 2;
+    }
+
+    li:nth-child(8) {
+      background-color: var(--accent);
     }
   }
 
@@ -73,7 +102,10 @@
       width: 100%;
     }
   }
-}
 
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }

@@ -1,8 +1,10 @@
 import React from "react"
 import { dateFromUrl } from "../../../lib/utils"
-import { SEO } from "../../../components/common"
+import { HomeLink, SEO } from "../../../components/common"
 import Layout, { fonts } from "../../../layouts/mattdrian"
 import { CardVideo } from "../../../components/cards"
+import Icon from "../../../components/svg/lateflip-icon"
+import { DateTime } from "luxon"
 
 export const frontmatter = {
   url: "/2020/07/13",
@@ -11,6 +13,20 @@ export const frontmatter = {
 }
 
 const date = dateFromUrl(frontmatter.url)
+
+const header = (
+  <header>
+    <div>
+      <HomeLink title="To the lateflip.com home page">
+        <Icon />
+      </HomeLink>
+    </div>
+    <div>
+      <h1>{frontmatter.subheadline}</h1>
+      <h2>{date.toLocaleString(DateTime.DATE_FULL)}</h2>
+    </div>
+  </header>
+)
 
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline} date={date}>
@@ -21,6 +37,8 @@ const Page = () => (
       description={frontmatter.description}
     />
     <ul className="grid">
+      <li>{header}</li>
+      <li>test</li>
       <li>
         <CardVideo
           title={`Venture vs Thunder!`}
@@ -35,11 +53,16 @@ const Page = () => (
           ]}
         />
       </li>
-      <li>hi</li>
-      <li>hey</li>
-      <li>content</li>
-      <li>wow</li>
-      <li>thanks</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
   </Layout>
 )
