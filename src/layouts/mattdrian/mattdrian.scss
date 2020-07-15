@@ -58,6 +58,7 @@
     background-color: var(--text);
     display: grid;
     min-height: calc(100vh - 3.2em);
+    min-height: 100vh;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2vw;
 
@@ -83,6 +84,15 @@
     li:nth-child(11) {
       background-color: var(--text);
     }
+
+    a {
+      text-decoration: none;
+      color: var(--text);
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
   }
 
   .card {
@@ -91,9 +101,44 @@
     }
   }
 
+  .footer {
+    border-top: 2vw solid var(--text);
+
+    a {
+      color: var(--text);
+    }
+  }
+
   @media (min-width: 768px) {
     .grid {
+      grid-gap: 1.5vw;
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer {
+      border-top-width: 1.5vw;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      grid-gap: 1.25vw;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .footer {
+      border-top-width: 1.25vw;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .grid {
+      grid-gap: 1vw;
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    .footer {
+      border-top-width: 1vw;
     }
   }
 }
