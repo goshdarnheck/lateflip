@@ -1,13 +1,14 @@
 .layout-default {
-  --background: rgb(50, 134, 29);
+  --background: rgb(43, 78, 89);
   --text: rgb(253, 251, 224);
   --primary: #fff;
   --secondary: rgb(100, 198, 255);
   --accent: rgb(77, 13, 18);
-  --heading-font: "Montserrat", "comic sans ms", sans-serif;
+  --heading-font: "Londrina Sketch", "Monoton", sans-serif;
   --body-font: "Raleway", sans-serif;
 
   background-color: var(--secondary);
+  background: linear-gradient(#e66465, #9198e5);
   display: flex;
   flex-direction: column;
 
@@ -84,6 +85,30 @@
     p {
       margin: 1em 0;
     }
+
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--text);
+        text-decoration: underline overline wavy var(--secondary);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1024px) {
+    header {
+      svg {
+        max-width: 60em;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
   }
 }
 

@@ -5,7 +5,7 @@ import { Footer, HomeLink, Top } from "../../components/common"
 import Logo from "../../components/svg/lateflip-logo"
 import "./default.scss"
 
-export const fonts = ["Montserrat"]
+export const fonts = ["Londrina Sketch", "Monoton"]
 
 const Default = ({ children }) => (
   <div className="layout layout-default">
