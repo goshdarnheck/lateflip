@@ -1,14 +1,14 @@
 .layout-default {
   --background: rgb(43, 78, 89);
   --text: rgb(253, 251, 224);
-  --primary: #fff;
-  --secondary: rgb(100, 198, 255);
+  --primary: #e66465;
+  --secondary: #9198e5;
   --accent: rgb(77, 13, 18);
   --heading-font: "Londrina Sketch", "Monoton", sans-serif;
   --body-font: "Raleway", sans-serif;
 
   background-color: var(--secondary);
-  background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(#e66465, var(--secondary));
   display: flex;
   flex-direction: column;
 
@@ -23,11 +23,6 @@
     justify-content: center;
     padding: 2em;
 
-    a {
-      max-width: 100%;
-      width: 100%;
-    }
-
     .lateflip-logo {
       animation: Float 3s linear 0s infinite;
     }
@@ -41,7 +36,6 @@
     }
 
     .lateflip-logo-shadow {
-      fill: var(--accent);
       fill: transparent;
     }
   }
@@ -64,7 +58,7 @@
 
     > div {
       padding: 5em 2em;
-      max-width: 50em;
+      max-width: 40em;
       margin: 0 auto;
     }
 
@@ -91,13 +85,35 @@
       text-decoration: none;
 
       &:hover {
-        color: var(--text);
-        text-decoration: underline overline wavy var(--secondary);
+        color: #fff;
+        text-decoration: underline wavy #fff;
+      }
+    }
+  }
+
+  .footer {
+    background-color: var(--accent);
+
+    a {
+      color: var(--text);
+
+      &:hover {
+        color: #fff;
+        text-decoration: underline wavy #fff;
       }
     }
   }
 
   @media (min-width: 768px) {
+    header {
+      padding: 4em;
+    }
+
+    article {
+      h1 {
+        font-size: 6.6em;
+      }
+    }
   }
 
   @media (min-width: 1024px) {
@@ -136,7 +152,7 @@
   }
 
   50% {
-    fill: var(--primary);
+    fill: #fff;
   }
 
   100% {
