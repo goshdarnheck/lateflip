@@ -8,7 +8,16 @@ import "./cube.scss"
 export const fonts = ["Montserrat", "Poiret One"]
 
 const Cube = ({ children, subheadline, date }) => {
+  const cubeFriends = {
+    0: [4, 2, 5, 3],
+    1: [4, 3, 5, 2],
+    2: [4, 1, 5, 0],
+    3: [4, 0, 5, 1],
+    4: [5, 2, 0, 3],
+    5: [0, 2, 1, 3]
+  }
   const [side, setSide] = useState(0)
+  const sideChanger = (click) => setSide(cubeFriends[side][click]);
 
   return (
     <div className="layout layout-cube">
@@ -30,23 +39,18 @@ const Cube = ({ children, subheadline, date }) => {
           <div className="cube">{children}</div>
           <ul className="cube-controls">
             <li>
-              <button aria-label="Rotate to side one" onClick={() => setSide(0)}></button>
+              <button aria-label="Rotate to top face" onClick={() => sideChanger(0)}></button>
             </li>
             <li>
-              <button aria-label="Rotate to side two" onClick={() => setSide(1)}></button>
+              <button aria-label="Rotate to right face" onClick={() => sideChanger(1)}></button>
             </li>
             <li>
-              <button aria-label="Rotate to side three" onClick={() => setSide(2)}></button>
+              <button aria-label="Rotate to bottom face" onClick={() => sideChanger(2)}></button>
             </li>
             <li>
-              <button aria-label="Rotate to side four" onClick={() => setSide(3)}></button>
+              <button aria-label="Rotate to left face" onClick={() => sideChanger(3)}></button>
             </li>
-            <li>
-              <button aria-label="Rotate to side five" onClick={() => setSide(4)}></button>
-            </li>
-            <li>
-              <button aria-label="Rotate to side six" onClick={() => setSide(5)}></button>
-            </li>
+            <li></li>
           </ul>
         </article>
       </main>

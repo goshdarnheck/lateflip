@@ -32,11 +32,11 @@ const Page = () => (
           extras={[<a href="https://www.thrashermagazine.com/">Thrasher</a>]}
         />
       </li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+      <li>d</li>
+      <li>e</li>
     </ul>
   </Layout>
 )

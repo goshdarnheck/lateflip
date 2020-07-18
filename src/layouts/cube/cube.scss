@@ -72,10 +72,17 @@
     linear-gradient(90deg, rgb(255, 255, 255), rgb(183, 199, 255));
 
   main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 2em 0;
   }
 
   article {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
     margin: 0 auto;
   }
 
@@ -284,58 +291,51 @@
 
   .cube-controls {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     height: 24vw;
     list-style: none;
     margin: 2em auto 0;
     padding: 0;
     position: relative;
-    width: 32vw;
+    width: 24vw;
 
     li {
       align-items: center;
-      background-color: rgba(255, 255, 255, 0.2);
       border: 0.2em solid var(--background);
       box-shadow: inset 0 0 2em var(--background), 0 0 2em var(--background);
-      display: flex;
       height: 8vw;
-      justify-content: center;
-      transition: background 500ms;
       width: 8vw;
 
-      &:hover {
-        background-color: var(--background);
-      }
-
       &:nth-child(1) {
-        grid-area: 3 / 2 / 4 / 3;
+        border-bottom: 0;
+        grid-area: 1 / 2 / 2 / 3;
       }
 
       &:nth-child(2) {
-        grid-area: 3 / 4 / 4 / 5;
+        border-left: 0;
+        grid-area: 2 / 3 / 3 / 4;
       }
 
       &:nth-child(3) {
-        grid-area: 3 / 3 / 4 / 4;
+        border-top: 0;
+        grid-area: 3 / 2 / 4 / 3;
       }
 
       &:nth-child(4) {
-        grid-area: 3 / 1 / 4 / 2;
+        border-right: 0;
+        grid-area: 2 / 1 / 3 / 2;
       }
 
       &:nth-child(5) {
+        border: 0;
         grid-area: 2 / 2 / 3 / 3;
-      }
-
-      &:nth-child(6) {
-        grid-area: 4 / 2 / 5 / 3;
       }
     }
 
     button {
       appearance: none;
-      background-color: transparent;
+      background-color: rgba(255, 255, 255, 0.2);
       border: 0;
       border-radius: 0;
       color: var(--background);
@@ -347,15 +347,16 @@
       text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
         0 0 0.2em #fff, 1px 1px 1px #0f0, -1px -1px 1px #000, 1px 2px 3px #000,
         -1px 1px 1px #00f, 1px -1px 1px #f0f;
-      transition: text-shadow 500ms;
-      width: 100%;
-      height: 100%;
+      transition: all 500ms;
+      width: 8vw;
+      height: 8vw;
 
       &:focus,
       &:hover {
         text-shadow: 0 -0.2em 0.9em #fff, 0 -0.2em 0.6em #fff, 0 0 0.3em #fff,
           0 0 0.2em #fff, 1px 1px 1px #00f, -1px -1px 1px #0f0, 1px 2px 3px #f0f,
           -1px 1px 1px #00f, 1px -1px 1px #f0f;
+        background-color: var(--background);
       }
 
       &:hover {
@@ -366,15 +367,6 @@
         outline: none;
       }
     }
-  }
-
-  .side-0 .cube-controls li:nth-child(1),
-  .side-1 .cube-controls li:nth-child(2),
-  .side-2 .cube-controls li:nth-child(3),
-  .side-3 .cube-controls li:nth-child(4),
-  .side-4 .cube-controls li:nth-child(5),
-  .side-5 .cube-controls li:nth-child(6) {
-    background-color: var(--background);
   }
 
   .side-0 .grid > li:nth-child(1) .card,
@@ -395,6 +387,7 @@
     main {
       align-items: center;
       display: flex;
+      flex-direction: row;
     }
 
     header {
@@ -507,6 +500,8 @@
 
       button {
         font-size: 3em;
+        height: 3em;
+        width: 3em;
       }
     }
   }
