@@ -17,7 +17,9 @@ const Default = ({ children }) => (
         </HomeLink>
       </header>
       <article>
-        <div>{children}</div>
+        <div>
+          <div>{children}</div>
+        </div>
       </article>
     </main>
     <Footer />

@@ -12,7 +12,7 @@
     to bottom,
     #e66465,
     var(--secondary),
-    var(--background)
+    var(--background) 90%
   );
   display: flex;
   flex-direction: column;
@@ -27,6 +27,11 @@
     display: flex;
     justify-content: center;
     padding: 2em;
+
+    a {
+      display: block;
+      max-width: 10em;
+    }
 
     .lateflip-logo {
       animation: Float 3s linear 0s infinite;
@@ -46,40 +51,22 @@
   }
 
   article {
-    background-color: rgb(130, 132, 145);
+    background: url(./drawing-o.svg) no-repeat top center;
+    background-size: 175vw auto;
+    padding-top: 50vw;
     color: var(--text);
-    clip-path: polygon(
-      50% 6%,
-      70% 0,
-      85% 6%,
-      100% 0,
-      100% 100%,
-      0 100%,
-      0 0,
-      14% 6%,
-      31% 0
-    );
     display: flex;
     flex-grow: 1;
 
     > div {
       background-color: var(--background);
       flex-grow: 1;
-      margin: 4em auto 0;
-      max-width: 40em;
-      padding: 5em 2em;
+      padding: 0 2em;
 
-      clip-path: polygon(
-        65% 0%,
-        80% 6%,
-        95% 0%,
-        100% 2%,
-        100% 100%,
-        0 100%,
-        0 6%,
-        25% 0%,
-        40% 6%
-      );
+      > div {
+        margin: 0 auto;
+        max-width: 40em;
+      }
     }
 
     h1 {
@@ -123,26 +110,28 @@
   }
 
   @media (min-width: 768px) {
-    header {
-      padding: 4em;
-    }
-
     article {
+      background-size: 150vw auto;
+      padding-top: 35vw;
+
       h1 {
         font-size: 6.6em;
       }
     }
   }
 
-  @media (min-width: 1024px) {
-    header {
-      svg {
-        max-width: 60em;
-      }
+  @media (min-width: 768px) {
+    article {
+      background-size: 125vw auto;
+      padding-top: 30vw;
     }
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: 1140px) {
+    article {
+      background-size: 100vw auto;
+      padding-top: 25vw;
+    }
   }
 }
 
