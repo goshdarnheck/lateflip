@@ -14,7 +14,7 @@ const date = dateFromUrl(frontmatter.url)
 
 const Page = () => (
   <Layout subheadline={frontmatter.subheadline} date={date}>
-    {(header) => (
+    {header => (
       <>
         <SEO
           fonts={fonts}
@@ -40,7 +40,20 @@ const Page = () => (
             />
           </li>
           <li></li>
-          <li></li>
+          <li>
+            <CardVideo
+              title={`BEAGLE Tapes: Episode 37 - Bryan Herman and Andrew Reynolds`}
+              id="RfA6ROrQIU4"
+              type="youtube"
+              thumbnailQuality="maxresdefault"
+              details="Video - 17m"
+              extras={[
+                <a href="https://www.youtube.com/channel/UC8X6lWtSILREl2qV96fohTA">
+                  HIJINX Net
+                </a>,
+              ]}
+            />
+          </li>
           <li></li>
           <li></li>
           <li></li>

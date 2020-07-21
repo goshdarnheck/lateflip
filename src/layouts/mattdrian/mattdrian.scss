@@ -4,7 +4,7 @@
   --primary: rgb(199, 2, 2);
   --secondary: rgb(235, 211, 1);
   --accent: rgb(37, 56, 161);
-  --grey: #999;
+  --grey: #aaa;
   --heading-font: "Josefin Sans", sans-serif;
 
   background-color: var(--background);
@@ -21,18 +21,21 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 1em;
     height: 100%;
 
     > div:nth-child(1) {
       margin-bottom: 2em;
-      padding: 0 2em;
     }
 
     > div:nth-child(2) {
       h1 {
         font-family: var(--heading-font);
         text-transform: uppercase;
+        font-size: 1.4em;
+      }
+
+      h2 {
+        font-size: 1.1em;
       }
 
       h1,
@@ -62,27 +65,31 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2vw;
 
-    li {
+    > li {
       background-color: var(--background);
       padding: 1em;
-    }
 
-    li:nth-child(2) {
-      background-color: var(--primary);
-      grid-row: span 2;
-    }
+      &:nth-child(2) {
+        background-color: var(--primary);
+        grid-row: span 2;
+      }
 
-    li:nth-child(6) {
-      background-color: var(--secondary);
-      grid-column: span 2;
-    }
+      &:nth-child(6) {
+        background-color: var(--secondary);
+        grid-column: span 2;
+      }
 
-    li:nth-child(8) {
-      background-color: var(--accent);
-    }
+      &:nth-child(7) {
+        background-color: var(--grey);
+      }
 
-    li:nth-child(11) {
-      background-color: var(--text);
+      &:nth-child(8) {
+        background-color: var(--accent);
+      }
+
+      &:nth-child(11) {
+        background-color: var(--text);
+      }
     }
 
     a {
@@ -96,8 +103,21 @@
   }
 
   .card {
+    h2 {
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
     img {
       width: 100%;
+    }
+
+    .extras {
+      margin: 0;
+      list-style: none;
+      padding: 0;
     }
   }
 
@@ -124,6 +144,22 @@
     .grid {
       grid-gap: 1.25vw;
       grid-template-columns: repeat(6, 1fr);
+
+      li {
+        &:nth-child(2) {
+          grid-column: span 4;
+          grid-row: span 4;
+        }
+
+        &:nth-child(4) {
+          grid-row: span 3;
+        }
+
+        &:nth-child(5) {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+      }
     }
 
     .footer {

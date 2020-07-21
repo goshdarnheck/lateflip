@@ -1,6 +1,7 @@
 - style unique 404 page
 - style about page
 - get pages in page and try to find a "previous" page
+- reverse years and months in the archive
 
 # ideas
 
