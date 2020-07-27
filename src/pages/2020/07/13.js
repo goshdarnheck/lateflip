@@ -25,6 +25,8 @@ const Page = () => (
         <ul className="grid">
           <li>{header}</li>
           <li></li>
+          <li></li>
+          <li></li>
           <li>
             <CardVideo
               title={`Venture vs Thunder!`}
@@ -39,6 +41,7 @@ const Page = () => (
               ]}
             />
           </li>
+          <li></li>
           <li></li>
           <li>
             <CardVideo
@@ -60,9 +63,20 @@ const Page = () => (
           <li></li>
           <li></li>
           <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            <CardVideo
+              title={`Some thing Else`}
+              id="RfA6ROrQIU4"
+              type="youtube"
+              thumbnailQuality="maxresdefault"
+              details="Video - 17m"
+            />
+          </li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
         </ul>
       </>
     )}

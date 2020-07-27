@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 1em;
     height: 100%;
 
     > div:nth-child(1) {
@@ -62,33 +63,98 @@
     display: grid;
     min-height: calc(100vh - 3.2em);
     min-height: 100vh;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2vw;
+    grid-template-columns: repeat(24, 1fr);
+    grid-gap: 3vw;
 
     > li {
       background-color: var(--background);
-      padding: 1em;
+      padding: 0;
+      grid-column: span 12;
+
+      &:nth-child(1) {
+        grid-area: 1 / 1 / 11 / 13;
+      }
 
       &:nth-child(2) {
         background-color: var(--primary);
-        grid-row: span 2;
+        grid-area: 1 / 13 / 4 / 16;
+      }
+
+      &:nth-child(3) {
+        grid-area: 1 / 16 / 4 / 25;
+      }
+
+      &:nth-child(4) {
+        background-color: var(--accent);
+        grid-area: 4 / 13 / 8 / 25;
+      }
+
+      &:nth-child(5) {
+        grid-area: 8 / 13 / 16 / 25;
       }
 
       &:nth-child(6) {
         background-color: var(--secondary);
-        grid-column: span 2;
+        grid-area: 11 / 1 / 16 / 13;
       }
 
       &:nth-child(7) {
-        background-color: var(--grey);
+        grid-area: 16 / 1 / 36 / 4;
       }
 
       &:nth-child(8) {
-        background-color: var(--accent);
+        grid-area: 16 / 4 / 36 / 17;
+      }
+
+      &:nth-child(9) {
+        grid-area: 16 / 17 / 22 / 25;
+      }
+
+      &:nth-child(10) {
+        background-color: var(--grey);
+        grid-area: 22 / 17 / 26 / 20;
       }
 
       &:nth-child(11) {
-        background-color: var(--text);
+        background-color: var(--primary);
+        grid-area: 22 / 20 / 36 / 25;
+      }
+
+      &:nth-child(12) {
+        grid-area: 26 / 17 / 36 / 20;
+      }
+
+      &:nth-child(13) {
+        grid-area: 36 / 1 / 40 / 6;
+      }
+
+      &:nth-child(19) {
+        grid-area: 36 / 6 / 40 / 14;
+      }
+
+      &:nth-child(20) {
+        grid-area: 36 / 14 / 40 / 25;
+      }
+
+      &:nth-child(14) {
+        background-color: var(--secondary);
+        grid-area: 40 / 1 / 46 / 9;
+      }
+
+      &:nth-child(15) {
+        grid-area: 40 / 9 / 46 / 25;
+      }
+
+      &:nth-child(16) {
+        grid-area: 46 / 1 / 52 / 21;
+      }
+
+      &:nth-child(17) {
+        grid-area: 46 / 21 / 54 / 25;
+      }
+
+      &:nth-child(18) {
+        grid-area: 52 / 1 / 54 / 21;
       }
     }
 
@@ -103,6 +169,8 @@
   }
 
   .card {
+    padding: 1em;
+
     h2 {
       font-size: 1em;
       letter-spacing: 0.05em;
@@ -122,7 +190,7 @@
   }
 
   .footer {
-    border-top: 2vw solid var(--text);
+    border-top: 3vw solid var(--text);
 
     a {
       color: var(--text);
