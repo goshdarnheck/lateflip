@@ -1,10 +1,11 @@
 .layout-mattdrian {
-  --background: #fff;
+  --background: rgb(245, 243, 236);
   --text: #000;
   --primary: rgb(199, 2, 2);
-  --secondary: rgb(235, 211, 1);
-  --accent: rgb(37, 56, 161);
-  --grey: #aaa;
+  --secondary: rgb(241, 218, 8);
+  --accent: rgb(49, 37, 161);
+  --light: rgb(247, 246, 242);
+  --grey: rgb(179, 197, 196);
   --heading-font: "Josefin Sans", sans-serif;
 
   background-color: var(--background);
@@ -65,10 +66,9 @@
   .grid {
     background-color: var(--text);
     display: grid;
-    min-height: calc(100vh - 3.2em);
-    min-height: 100vh;
     grid-template-columns: repeat(24, 1fr);
-    grid-gap: 3vw;
+    grid-gap: 2.5vw;
+    min-height: 100vh;
 
     > li {
       align-items: center;
@@ -96,6 +96,7 @@
       }
 
       &:nth-child(5) {
+        background-color: var(--light);
         grid-area: 7 / 13 / 16 / 25;
       }
 
@@ -167,7 +168,78 @@
       }
 
       &:nth-child(21) {
-        grid-area: 55 / 1 / 75 / 25;
+        grid-area: 55 / 1 / 75 / 4;
+      }
+
+      &:nth-child(22) {
+        grid-area: 55 / 4 / 75 / 21;
+      }
+
+      &:nth-child(23) {
+        grid-area: 55 / 21 / 75 / 25;
+      }
+
+      &:nth-child(24) {
+        background-color: var(--grey);
+        grid-area: 75 / 1 / 80 / 25;
+      }
+
+      &:nth-child(25) {
+        grid-area: 80 / 1 / 82 / 12;
+      }
+
+      &:nth-child(26) {
+        grid-area: 80 / 12 / 82 / 25;
+      }
+
+      &:nth-child(27) {
+        grid-area: 82 / 1 / 100 / 5;
+      }
+
+      &:nth-child(28) {
+        background-color: var(--accent);
+        grid-area: 82 / 5 / 95 / 10;
+      }
+
+      &:nth-child(29) {
+        grid-area: 82 / 10 / 95 / 25;
+      }
+
+      &:nth-child(30) {
+        grid-area: 95 / 5 / 100 / 25;
+      }
+
+      &:nth-child(31) {
+        background-color: var(--secondary);
+        grid-area: 100 / 1 / 105 / 25;
+      }
+
+      &:nth-child(32) {
+        grid-area: 105 / 1 / 108 / 19;
+      }
+
+      &:nth-child(33) {
+        grid-area: 105 / 19 / 108 / 22;
+      }
+
+      &:nth-child(34) {
+        grid-area: 105 / 22 / 108 / 25;
+      }
+
+      &:nth-child(35) {
+        grid-area: 108 / 1 / 120 / 4;
+      }
+
+      &:nth-child(36) {
+        grid-area: 108 / 4 / 120 / 7;
+      }
+
+      &:nth-child(37) {
+        grid-area: 108 / 7 / 127 / 25;
+      }
+
+      &:nth-child(38) {
+        grid-area: 120 / 1 / 127 / 7;
       }
     }
 
@@ -184,6 +256,7 @@
   .card {
     max-width: 16em;
     padding: 1em;
+    transition: opacity 300ms;
 
     h2 {
       font-size: 0.8em;
@@ -191,11 +264,7 @@
       line-height: 1.5;
       font-variant: small-caps;
       font-family: var(--heading-font);
-      text-align: left;
-    }
-
-    a:hover img {
-      filter: none;
+      text-align: center;
     }
 
     img {
