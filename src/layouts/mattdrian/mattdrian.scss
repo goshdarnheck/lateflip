@@ -1,11 +1,10 @@
 .layout-mattdrian {
-  --background: rgb(245, 243, 236);
+  --background: rgb(247, 246, 242);
   --text: #000;
   --primary: rgb(199, 2, 2);
   --secondary: rgb(241, 218, 8);
   --accent: rgb(49, 37, 161);
-  --light: rgb(247, 246, 242);
-  --grey: rgb(179, 197, 196);
+  --light: rgb(252, 251, 250);
   --heading-font: "Josefin Sans", sans-serif;
 
   background-color: var(--background);
@@ -110,11 +109,12 @@
       }
 
       &:nth-child(8) {
+        background-color: var(--light);
         grid-area: 16 / 4 / 36 / 17;
       }
 
       &:nth-child(9) {
-        background-color: var(--grey);
+        background-color: var(--text);
         grid-area: 16 / 17 / 22 / 25;
       }
 
@@ -136,7 +136,7 @@
       }
 
       &:nth-child(14) {
-        background-color: var(--accent);
+        background-color: var(--secondary);
         grid-area: 36 / 6 / 40 / 14;
       }
 
@@ -145,7 +145,7 @@
       }
 
       &:nth-child(16) {
-        background-color: var(--secondary);
+        background-color: var(--accent);
         grid-area: 40 / 1 / 46 / 9;
       }
 
@@ -168,10 +168,12 @@
       }
 
       &:nth-child(21) {
+        background-color: var(--text);
         grid-area: 55 / 1 / 75 / 4;
       }
 
       &:nth-child(22) {
+        background-color: var(--light);
         grid-area: 55 / 4 / 75 / 21;
       }
 
@@ -180,15 +182,16 @@
       }
 
       &:nth-child(24) {
-        background-color: var(--grey);
         grid-area: 75 / 1 / 80 / 25;
       }
 
       &:nth-child(25) {
+        background-color: var(--primary);
         grid-area: 80 / 1 / 82 / 12;
       }
 
       &:nth-child(26) {
+        background-color: var(--primary);
         grid-area: 80 / 12 / 82 / 25;
       }
 
@@ -202,15 +205,16 @@
       }
 
       &:nth-child(29) {
+        background-color: var(--light);
         grid-area: 82 / 10 / 95 / 25;
       }
 
       &:nth-child(30) {
+        background-color: var(--secondary);
         grid-area: 95 / 5 / 100 / 25;
       }
 
       &:nth-child(31) {
-        background-color: var(--secondary);
         grid-area: 100 / 1 / 105 / 25;
       }
 
@@ -219,14 +223,17 @@
       }
 
       &:nth-child(33) {
+        background-color: var(--secondary);
         grid-area: 105 / 19 / 108 / 22;
       }
 
       &:nth-child(34) {
+        background-color: var(--primary);
         grid-area: 105 / 22 / 108 / 25;
       }
 
       &:nth-child(35) {
+        background-color: var(--primary);
         grid-area: 108 / 1 / 120 / 4;
       }
 
@@ -235,11 +242,27 @@
       }
 
       &:nth-child(37) {
+        background-color: var(--light);
         grid-area: 108 / 7 / 127 / 25;
       }
 
       &:nth-child(38) {
         grid-area: 120 / 1 / 127 / 7;
+      }
+
+      &:nth-child(39) {
+        background-color: var(--accent);
+        grid-area: 127 / 1 / 133 / 16;
+      }
+
+      &:nth-child(40) {
+        background-color: var(--primary);
+        grid-area: 127 / 16 / 135 / 25;
+      }
+
+      &:nth-child(41) {
+        background-color: var(--secondary);
+        grid-area: 133 / 1 / 135 / 16;
       }
     }
 
@@ -265,6 +288,7 @@
       font-variant: small-caps;
       font-family: var(--heading-font);
       text-align: center;
+      margin: 0 0 0.8em 0;
     }
 
     img {
