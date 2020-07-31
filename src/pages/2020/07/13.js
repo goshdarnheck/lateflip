@@ -24,9 +24,6 @@ const Page = () => (
         />
         <ul className="grid">
           <li>{header}</li>
-          <li></li>
-          <li></li>
-          <li></li>
           <li>
             <CardVideo
               title={`Venture vs Thunder!`}
@@ -41,8 +38,6 @@ const Page = () => (
               ]}
             />
           </li>
-          <li></li>
-          <li></li>
           <li>
             <CardVideo
               title={`BEAGLE Tapes: Episode 37 - Bryan Herman and Andrew Reynolds`}
@@ -57,14 +52,6 @@ const Page = () => (
               ]}
             />
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
           <li>
             <CardVideo
               title={`Some thing Else`}
@@ -74,10 +61,6 @@ const Page = () => (
               details="Video - 17m"
             />
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
           <li>
             <CardVideo
               title={`Some thing Else`}
@@ -87,12 +70,6 @@ const Page = () => (
               details="Video - 17m"
             />
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
           <li>
             <CardVideo
               title={`ookay`}
@@ -102,13 +79,6 @@ const Page = () => (
               details="Video - 17m"
             />
           </li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
           <li>
             <CardVideo
               title={`Some thing Else`}
@@ -118,6 +88,36 @@ const Page = () => (
               details="Video - 17m"
             />
           </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
           <li></li>
           <li></li>
           <li></li>

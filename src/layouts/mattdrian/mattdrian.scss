@@ -81,36 +81,36 @@
       }
 
       &:nth-child(2) {
-        background-color: var(--primary);
-        grid-area: 1 / 13 / 4 / 16;
-      }
-
-      &:nth-child(3) {
-        grid-area: 1 / 16 / 4 / 25;
-      }
-
-      &:nth-child(4) {
-        background-color: var(--accent);
-        grid-area: 4 / 13 / 7 / 25;
-      }
-
-      &:nth-child(5) {
         background-color: var(--light);
         grid-area: 7 / 13 / 16 / 25;
       }
 
+      &:nth-child(3) {
+        background-color: var(--light);
+        grid-area: 16 / 4 / 36 / 17;
+      }
+
+      &:nth-child(4) {
+        grid-area: 40 / 9 / 46 / 25;
+      }
+
+      &:nth-child(5) {
+        background-color: var(--light);
+        grid-area: 55 / 4 / 75 / 21;
+      }
+
       &:nth-child(6) {
-        background-color: var(--secondary);
-        grid-area: 11 / 1 / 16 / 13;
+        background-color: var(--light);
+        grid-area: 82 / 10 / 95 / 25;
       }
 
       &:nth-child(7) {
-        grid-area: 16 / 1 / 36 / 4;
+        background-color: var(--light);
+        grid-area: 108 / 7 / 127 / 25;
       }
 
       &:nth-child(8) {
-        background-color: var(--light);
-        grid-area: 16 / 4 / 36 / 17;
+        grid-area: 1 / 16 / 4 / 25;
       }
 
       &:nth-child(9) {
@@ -150,7 +150,8 @@
       }
 
       &:nth-child(17) {
-        grid-area: 40 / 9 / 46 / 25;
+        background-color: var(--accent);
+        grid-area: 4 / 13 / 7 / 25;
       }
 
       &:nth-child(18) {
@@ -173,8 +174,8 @@
       }
 
       &:nth-child(22) {
-        background-color: var(--light);
-        grid-area: 55 / 4 / 75 / 21;
+        background-color: var(--primary);
+        grid-area: 1 / 13 / 4 / 16;
       }
 
       &:nth-child(23) {
@@ -205,8 +206,8 @@
       }
 
       &:nth-child(29) {
-        background-color: var(--light);
-        grid-area: 82 / 10 / 95 / 25;
+        background-color: var(--secondary);
+        grid-area: 11 / 1 / 16 / 13;
       }
 
       &:nth-child(30) {
@@ -215,6 +216,7 @@
       }
 
       &:nth-child(31) {
+        background-color: var(--textS);
         grid-area: 100 / 1 / 105 / 25;
       }
 
@@ -242,8 +244,7 @@
       }
 
       &:nth-child(37) {
-        background-color: var(--light);
-        grid-area: 108 / 7 / 127 / 25;
+        grid-area: 16 / 1 / 36 / 4;
       }
 
       &:nth-child(38) {
